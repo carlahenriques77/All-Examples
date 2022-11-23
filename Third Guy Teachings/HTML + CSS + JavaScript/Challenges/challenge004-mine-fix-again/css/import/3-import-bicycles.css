@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@import url("../home/1-header.css");
+
+@import url("../bicycles/2-b-main.css");
+
+@import url("../home/8-footer.css");
+
+@import url("../utilities/5-fixed-header.css");
+
+@import url("../import/1-import-global.css");
+
+@import url("../utilities/4-header.css");
+
+@import url("../utilities/2-components.css");

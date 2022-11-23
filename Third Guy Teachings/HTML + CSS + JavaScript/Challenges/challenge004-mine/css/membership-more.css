@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+article.seguros {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.membership-box {
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.membership-box ul {
+    display: grid;
+    gap: 20px;
+    grid-column: 1/-1;
+}
+
+.price-membership {
+    text-align: right;
+}
+
+.mensal {
+    grid-column: 2;
+    text-align: right;
+}
+
+.membership-advantages li {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.membership-advantages li:before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 10px;
+    background: url("https://www.origamid.com/projetos/bikcraft/img/icones/lista.svg") no-repeat;
+    position: absolute;
+    left: -18px;
+    top: 4px;
+}
+
+
+
+
+footer {
+    background: black;
+    padding: 50px 20px;
+    color: white;
+}
+
+footer h2 {
+    margin-bottom: 30px;
+}
+
+footer a, li {
+    color: #b2b2b2;
+}
+
+.contact-ul li:nth-child(even)::after {
+    content: "";
+    display: block;
+    max-width: 414px;
+    height: 1px;
+    background: rgba(128, 128, 128, 0.405);
+    margin-top: 15px;
+}
+
+.contact-ul {
+    color: gray;
+}
+
+.contact-ul li {
+    margin-bottom: 20px;
+}
+
+.social-logos {
+    display: flex;
+    gap: 30px;
+}
+
+.information-h2 {
+    margin-top: 30px;
+}
+
+.navigation-ul {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+p.copyright {
+    margin: 40px 0 0px;
+    color: #9c9c9c;
+}
+
+
+
+@media (min-width: 608px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px 50px;
+    }
+
+    .information-h2 {
+        margin: 0 0 30px;
+    }
+
+    p.copyright {
+        grid-column: 1/-1;
+    }
+}

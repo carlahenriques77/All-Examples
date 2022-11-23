@@ -1,0 +1,14 @@
+.terms-con {
+    padding: 60px 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.terms-con h2:not(.terms-con h2:first-child) {
+    margin: 10px 0 0 0;
+}
+
+.terms-con p {
+    max-width: 72ch;
+    line-height: 1.5;
+}

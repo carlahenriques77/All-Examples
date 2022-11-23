@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML5, CSS3, LAYOUT, html, css, layout, css-grid"/>
+  <meta name="description" content="Single price grid component"/>
+  <meta name="author" content="Samuel Amaro"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+  <title>Frontend Mentor | Single Price Grid Component</title>
+  <style>
+    /*font-family: 'Karla', sans-serif; - 400 - 700*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/**TYPOGRAPY**/
+html{
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+body{
+    background-color: hsl(204, 43%, 93%);
+}
+
+/*GRID CONTAINER */
+
+.container__section-join{
+    background-color: white;
+    grid-area: a;
+}
+
+.container__section-subscription{
+    background-color: hsl(179, 62%, 40%);
+    grid-area: b;
+}
+
+.container__section-why{
+    background-color: hsl(179, 62%, 43%);
+    grid-area: c;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2fr 260px 260px 2fr;
+    grid-template-rows: 1fr min-content min-content 1fr;
+    grid-template-areas:   
+        ". . . ."
+        ". a a ."
+        ". b c ."
+        ". . . .";
+    box-shadow: 0px 13px 10px black;
+}
+
+/**SECTION JOIN**/
+.container__section-join{
+    padding: 30px 30px 30px 30px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.container__title{
+    font-size: 17px;
+    /*padding: 8px 0 20px 0;*/
+    color: hsl(189, 100%, 27%);
+    font-weight: 700;
+    padding-bottom: 18px;
+    line-height: 1.6;
+}
+
+.container__section-join .container__header .container__subtitle{
+    font-size: 14px;
+    padding-bottom: 8px;
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+}
+
+.container__section-join .container__description{
+    font-size: 13px;
+    line-height: 1.7;
+    color: hsl(218, 22%, 67%);
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+/**sSECTION SUBSCRIPTION**/
+
+.container__section-subscription{
+    padding: 30px 30px 30px 30px;
+    border-bottom-left-radius: 6px;
+}
+
+.container__section-subscription .container__header{
+    margin-bottom: 14px;
+}
+
+.container__price{
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.container__price--font-size{
+    font-size: 13px;
+    color: hsl(204, 43%, 93%, 0.4);
+    font-weight: 400;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.container__title--color-white{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0;
+}
+
+.container__section-subscription .container__description{
+    color: hsl(204, 43%, 93%);
+    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.container__button{
+    background-color: hsl(71, 73%, 54%);
+    color: hsl(204, 43%, 93%);
+    display: block;
+    width: 95%;
+    border: none;
+    padding: 10px 0;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+    font-size: 11px;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px #6d6c6c94;
+}
+
+/**SECTION WHY**/
+
+.container__section-why{
+    padding: 30px 30px 30px 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 6px;
+}
+
+.container__section-why .container__title{
+    color: hsl(204, 43%, 93%);
+    padding-bottom: 8px;
+    font-size: 15px;
+}
+
+.container__section-why .container__description{
+    padding: 0;
+    list-style-type: none;
+    color: hsl(204, 43%, 93%);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/**MOBILE FIRST**/
+
+/*breakpoint 375px or menos*/
+@media screen and (max-width: 682px) and (orientation: portrait) {
+    /*grid container*/
+    .container{
+        height: 100vh;
+        grid-template-columns: 1fr 12fr 1fr;
+        grid-template-rows: 1fr min-content min-content min-content 1fr;
+        grid-template-areas: 
+            ". . ."
+            ". a ."
+            ". b ."
+            ". c ."
+            ". . .";
+    }
+
+    /**SECTION JOIN**/
+    .container__section-join{
+        padding: 20px 20px 20px 20px;
+    }
+
+    .container__section-join .container__description{
+        font-size: 12px;
+    }
+
+    /**sSECTION SUBSCRIPTION**/
+
+    .container__section-subscription{
+        padding: 16px 20px 20px 20px;
+        border-bottom-left-radius: 0;
+    }
+
+    /**SECTION WHY**/
+
+    .container__section-why{
+        padding: 18px 20px 20px 20px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
+  </style>
+</head>
+<body>
+
+  <main class="container">
+      <section class="container__section-join">
+        <header class="container__header">
+          <h1 class="container__title">Join our community</h1>
+          <h4 class="container__subtitle">30-day, hassle-free money back guarantee</h4>
+        </header>
+        <p class="container__description">Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+      </section>
+      <section class="container__section-subscription">
+        <header class="container__header">
+          <h4 class="container__title container__title--color-white">Monthly Subscription</h4>
+        </header>
+        <p class="container__price">&dollar;29 <span class="container__price--font-size">per month</span></p>
+        <p class="container__description">Full access for less than &dollar;1 a day</p>
+        <button type="button" class="container__button">Sign Up</button>
+      </section>
+      <section class="container__section-why">
+        <header class="container__header">
+          <h4 class="container__title">Why Us</h4>
+        </header>
+          <ul class="container__description">
+            <li>Tutorials by industry experts</li>
+            <li>Peer &amp; expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
+          </ul> 
+      </section>
+  </main>
+
+</body>
+</html>

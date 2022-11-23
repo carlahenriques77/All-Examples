@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+
+/* Character Colors */
+
+.color-0 {
+    color: white;
+}
+
+.color-1 {
+    color: black;
+}
+
+.color-2 {
+   color: #111111;
+}
+
+.color-3 {
+    color: #B2B2B2;
+}
+
+.color-4 {
+    color: rgba(0, 0, 0, 0.266);
+}
+
+.color-5 {
+   color: #595959;
+}
+
+.color-6 {
+   color: #664400;
+}
+
+.color-7 {
+    color: #cccccc;
+}
+
+.color-yellow-0 {
+    color: #FFBB00;
+}
+
+/* Character Colors */
+
+
+/* Background Colors */
+
+.color-background-0 {
+    background-color: white;
+}
+
+.color-background-1 {
+    background-color: black;
+}
+
+.color-background-2 {
+    background-color: #111111;
+}
+
+.color-background-3 {
+    background-color: #303030;
+}
+
+.color-background-4 {
+    background-color: #FFBB00;
+}
+
+/* Background Colors */
+
+
+/* Font Size*/
+
+.font-size-0-8rem {
+    font-size: 0.85rem;
+}
+
+.font-size-1-1rem {
+    font-size: 1.15rem;
+}
+
+.font-size-1-2rem {
+    font-size: 1.2rem;
+}
+
+.font-size-1-3rem {
+    font-size: 1.35rem;
+}
+
+.font-size-1-5rem {
+    font-size: 1.5rem;
+}
+
+.font-size-1-6rem {
+    font-size: 1.65rem;
+} 
+
+.font-2rem {
+    font-size: 2rem;
+}
+
+.font-size-3rem {
+    font-size: 3rem;
+}
+
+/* Font Size*/
+
+
+/* Line Height */
+
+.line-height-1-5 {
+    line-height: 1.5;
+}
+
+/* Line Height */
+
+
+/* Font Weight */
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+/* Font Weight */
+
+
+/* Font Family and Font Style */
+
+.font-family-3 {
+    font-family: serif;
+}
+
+.font-style-1 {
+    font-style: italic;
+}
+
+/* Font Family and Font Style */

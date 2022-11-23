@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      box-shadow: 0 0 0 2px red;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: karla;
+      list-style: none;
+      font-size: 18px;
+    }
+
+    body {
+      background-color: hsl(204, 43%, 93%);
+    }
+
+    p,
+    li {
+      font-size: 14px;
+    }
+
+    .container {
+      display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr 12fr 1fr;
+      grid-template-rows: 1fr min-content min-content min-content 1fr;
+      grid-template-areas:   
+        ". . ."
+        ". a ."
+        ". b ."
+        ". c ."
+        ". . .";
+    }
+
+    .con1 {
+      background: white;
+      grid-area: a;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .con2 {
+      background-color: hsl(179, 62%, 40%);
+      color: white;
+      grid-area: b;
+      display: grid;
+    }
+
+    .con3 {
+      background-color: hsl(179, 62%, 43%);
+      color: white;
+      grid-area: c;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .container div {
+      padding: 20px;
+    }
+
+    .con1 h2 {
+      color: hsl(179, 62%, 43%);
+    }
+
+    .con1 h3 {
+      color: hsl(71, 73%, 54%);
+      margin: 20px 0 15px 0;
+    }
+
+    .con1 p {
+      color: hsl(218, 22%, 67%);
+      line-height: 1.5;
+    }
+
+    .con2 h3 {
+      margin: 20px 0 15px 0;
+      font-size: 25px;
+    }
+
+    .con2 span {
+      font-size: 14px;
+      margin-left: 5px;
+      color: rgba(255, 255, 255, 0.705);
+    }
+
+    .con2 a {
+      color: white;
+      background: hsl(71, 73%, 54%);
+      padding: 10px;
+      text-align: center;
+      margin: 10px 0 0 0;
+      border-radius: 4px;
+    }
+
+    .con3 h2 {
+      margin: 0 0 15px 0;
+    }
+
+    li {
+      color: rgba(255, 255, 255, 0.705);
+      line-height: 1.25;
+    }
+
+    @media (min-width: 682px) {
+      .container {
+        height: 100vh;
+        grid-template-columns: 2fr 260px 260px 2fr;
+        grid-template-rows: 1fr min-content min-content 1fr;
+        grid-template-areas: 
+        ". . . ."
+        ". a a ."
+        ". b c ."
+        ". . . .";
+      }
+
+      .con2 {
+        border-radius: 0 0 0 10px;
+      }
+
+      .con3 {
+        border-radius: 0 0 10px 0px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="con1">
+
+      <h2>Join our community</h2>
+    
+      <h3>30-day, hassle-free money back guarantee</h3>
+    
+      <p>
+        Gain access to our full library of tutorials along with expert code reviews.
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+
+    </div>
+
+    <div class="con2">
+      
+        <h2>Monthly Subscription</h2>
+      
+        <h3>&dollar;29 <span>per month</span></h3>
+      
+        <p>Full access for less than &dollar;1 a day</p>
+      
+        <a href="">Sign Up</a>
+      
+    </div>
+
+    <div class="con3">
+
+      <h2>Why Us</h2>
+    
+      
+      <ul>
+        <li>Tutorials by industry experts</li>
+        <li>Peer &amp; expert code review</li>
+        <li>Coding exercises</li>
+        <li>Access to our GitHub repos</li>
+        <li>Community forum</li>
+        <li>Flashcard decks</li>
+        <li>New videos every week</li>
+      </ul>
+  
+      
+    </div>
+  </div>
+
+  
+</body>
+</html>

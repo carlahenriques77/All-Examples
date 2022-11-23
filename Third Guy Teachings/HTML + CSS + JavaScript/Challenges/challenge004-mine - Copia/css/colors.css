@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+.color-0 {
+    color: white;
+}
+
+.color-1 {
+    color: black;
+}
+
+.color-2 {
+   color: #111111;
+}
+
+.color-3 {
+    color: #B2B2B2;
+}
+
+.color-4 {
+    color: rgba(0, 0, 0, 0.266);
+}
+
+.color-yellow-0 {
+    color: #FFBB00;
+}
+
+
+
+
+
+
+.color-background-0 {
+    background-color: white;
+}
+
+.color-background-1 {
+    background-color: black;
+}
+
+.color-background-2 {
+    background-color: #111111;
+}
+
+.color-background-3 {
+    
+}
+
+
+
+.font-size-1-1rem {
+    font-size: 1.15rem;
+}
+
+.font-size-1-2rem {
+    font-size: 1.2rem;
+}
+
+.font-size-1-3rem {
+    font-size: 1.35rem;
+}
+
+.font-size-1-5rem {
+    font-size: 1.5rem;
+}
+
+.font-size-1-6rem {
+    font-size: 1.65rem;
+} 
+
+.font-2rem { /* h1 Sizes, maybe?*/
+    font-size: 2rem;
+}
+
+
+
+
+
+
+.line-height-1-5 {
+    line-height: 1.5;
+}
+
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-family-3 {
+    font-family: serif;
+}
+
+
+.font-style-1 {
+    font-style: italic;
+}
+
+
+.button {
+
+}

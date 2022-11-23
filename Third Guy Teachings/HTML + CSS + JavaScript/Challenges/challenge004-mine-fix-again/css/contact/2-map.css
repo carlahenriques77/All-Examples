@@ -1,0 +1,77 @@
+.c-map-sec {
+    padding: 50px 20px;
+}
+
+.c-map-sec h2 {
+    margin: 0px 0 30px 0;
+}
+
+.c-map-two {
+    display: grid;
+    gap: 20px;
+}
+
+.c-map-con img {
+    border-radius: 4px 4px 0 0;
+}
+
+.c-map-info div {
+    border-left: 2px solid #ededed;
+    padding-left: 15px;
+    display: grid;
+    align-items: center;
+}
+
+.c-map-info {
+    padding: 30px 40px;
+}
+
+.c-map-info p {
+    color: #595959;
+}
+
+.c-map-info h3 {
+    font-size: 1.35rem;
+}
+
+.c-map-info img {
+    display: inline-block;
+}
+
+.c-map-info p:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.c-map-info div p:first-child {
+    margin: 0 0 10px 0;
+}
+
+.c-map-info h3, 
+.c-map-info div{
+    margin: 0 0 20px 0;
+}
+
+@media (min-width: 600px) {
+    .c-map-two {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .c-map-info h3,
+    .c-map-info > p {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 800px) {
+    .c-map-info h3 {
+        font-size: 2rem;
+    }
+
+    .c-map-info {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,48 @@
+.insurance-pros {
+    display: grid;
+    padding: 60px 20px;
+    gap: 20px;
+}
+
+.insurance-pros ul {
+    display: grid;
+    gap: 20px;
+}
+
+.insurance-pros li {
+    display: grid;
+    gap: 10px;
+}
+
+.insurance-pros p {
+    color: #b2b2b2;
+    line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+    .insurance-pros ul {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+@media (min-width: 800px) {
+    .insurance-pros {
+        padding: 100px 20px;
+    }
+
+    .insurance-pros ul {
+        gap: 30px 60px;
+    }
+
+    .insurance-pros h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .insurance-pros ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

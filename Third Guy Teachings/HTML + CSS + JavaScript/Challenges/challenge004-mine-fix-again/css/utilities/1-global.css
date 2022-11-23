@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* box-shadow: 0 0 0 2px red; */
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 4px;
+}

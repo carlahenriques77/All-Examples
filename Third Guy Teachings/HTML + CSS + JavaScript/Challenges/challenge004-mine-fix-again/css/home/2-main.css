@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+    main {
+        box-shadow: inset 0px -50px 0 0 white
+    }
+
+    .main-content {
+        color: white;
+        padding: 0 20px;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 30px;
+        padding-top: 40px;
+    }
+
+    .main-info {
+        display: grid;
+        gap: 20px;
+    }
+
+    .main-info p {
+        line-height: 1.5;
+        font-size: 1.1rem;
+    }
+
+    .main-info a:hover {
+        background: #f2a50c;
+    }
+
+    .bike-img {
+        max-width: 100%;
+        display: block;
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+
+@media (min-width: 708px) {
+    main {
+        box-shadow: inset 0px -120px 0 0 white
+    }
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 0px;
+    }
+
+   .main-info {
+        align-self: end;
+        padding-bottom: 160px;
+    }  
+
+    main h1 {
+        font-size: 3rem;
+    }
+
+    main p {
+        font-size: 1.3rem;
+    }
+
+    main.info a {
+        padding: 16px 20px;
+        font-size: 1.5rem;
+    }
+
+    .bike-img {
+        height: 100%;
+    }
+
+     nav a {
+        position: relative;
+        padding: 16px 0px;
+    }
+
+    nav a::after {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 2px;
+        background: white;
+        position: absolute;
+        transition: width 0.3s;
+        margin-top: 3px;
+    }
+
+    nav a:hover::after {
+        width: 100%;
+    } 
+}
+
+
+@media (min-width: 1055px) {
+    .main-info {
+        align-self: center;
+    }  
+
+    main h1 {
+        font-size: 4rem;
+    }
+
+    .main-info p {
+        font-size: 1.5rem;
+    }
+
+    .main-info a {
+        font-size: 1.55rem;
+        padding: 16px 20px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .h-main {
+        background: black url("https://www.origamid.com/projetos/bikcraft/img/dec/bottom-left.svg") no-repeat bottom 162px left 19px;
+    }
+}

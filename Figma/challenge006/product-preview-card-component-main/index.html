@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Montserrat:wght@400;700&display=swap');
+
+    * {
+      /* box-shadow: 0 0 0 2px red; */
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: Montserrat;
+    }
+
+    main {
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h1,
+    h2 {
+      font-family: Fraunces;
+    }
+
+    h2 {
+      color: #3D8168;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 32px;
+    }
+
+    h2 > span {
+      font-size: 13px;
+      text-decoration-line: line-through;
+      color: #6C7289;
+    }
+
+    p {
+      color: #6C7289;
+      font-size: 14px;
+    }
+    
+    body {
+      min-height: 100vh;
+      background: #F2EAE2;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      
+    }
+
+    img:not(.info img) {
+      max-width: 100%;
+      display: block;
+      height: 100%;
+    }
+
+    .container {
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+      max-width: 350px;
+    }
+
+    .info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    a {
+      background: #3D8168;
+      color: white;
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (min-width: 1000px) {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 600px;
+      }
+
+      .info {
+        gap: 30px;
+      }
+    }
+    </style>
+</head>
+<body>
+<main>
+  
+    <div class="container">
+  
+      <picture>
+
+        <source media="(max-width: 999px)" srcset="images/image-product-mobile.jpg"
+        type="image/jpg">
+        <img src="images/image-product-desktop.jpg" alt="">
+
+      </picture>
+
+      <div class="info">
+  
+        <p>P E R F U M E</p>
+  
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+  
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+  
+        <h2>$149.99 <span>$169.99</span></h2>
+  
+        <a href=""> <img src="images/icon-cart.svg" alt=""> Add to Cart</a>
+  
+      </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <style>
+    * {
+      /* box-shadow: 0 0 0 2px red; */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Kumbh Sans;
+    }
+
+    body {
+      background-color:hsl(185, 75%, 39%);
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      background-image: url("images/bg-pattern-top.svg"),  url("images/bg-pattern-top.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: top 50vh left 50vw, bottom 50vh right 50vw;
+    }
+
+    h2,
+    span,
+    .num div p:nth-child(odd) {
+      font-size: 18px;
+    }
+
+    .container {
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .prof-info {
+      display: grid;
+      place-items: center;
+
+    }
+
+    .prof-info img {
+      margin: -50px 0 25px 0;
+      border-radius: 50%;
+      border: 4px solid white;
+    }
+
+    .prof-info > h2 {
+      margin: 0 0 5px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .prof-info span {
+      margin-left: 5px;
+    }
+
+    .prof-info p,
+    .prof-info span {
+      color:hsl(0, 0%, 59%);
+    }
+
+    .prof-info > p {
+      margin: 0 0 20px 0;
+      font-size: 13px;
+    }
+
+    .num {
+      border-top: 1px solid hsl(0, 0%, 59%);
+      display: grid;
+      padding: 20px 50px;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+    .num div {
+      text-align: center;
+    }
+
+    .num div p:nth-child(even) {
+      color: hsl(0, 0%, 59%);
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+
+      <img src="images/bg-pattern-card.svg" alt="">
+
+      <div class="prof-info">
+        <img src="images/image-victor.jpg" alt="">
+        <h2>Victor Crest <span>26</span></h2>
+        <p>London</p>
+
+      </div>
+
+        <div class="num">
+
+          <div>
+            <p>80K</p>
+            <p>Followers</p>
+          </div>
+
+          <div>
+            <p>803K</p>
+            <p>Likes</p>
+          </div>
+
+          <div>
+            <p>1.4K</p>
+            <p>Photos</p>
+          </div>
+        </div>
+
+    
+    </div>
+  </div>
+</body>
+</html>

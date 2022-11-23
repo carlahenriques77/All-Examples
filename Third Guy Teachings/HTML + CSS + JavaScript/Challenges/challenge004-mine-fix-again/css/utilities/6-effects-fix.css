@@ -1,0 +1,35 @@
+input:not(input[type="submit"]),
+textarea {
+    border: 1px solid #f7f7f7;
+    outline: none;
+}
+
+.p-info input:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffbb00;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.226);
+}
+
+.p-choices-form label:hover {
+    background: #4e4e4e;
+    border-color: #4e4e4e;
+}
+
+.p-choices-form label {
+    /* border: 3px solid #2e2e2e; */
+    border: 3px solid #2e2e2e;
+    cursor: pointer;
+}
+
+.p-choices-form input:checked + label {
+    background: white;
+    color: black;
+    border: 3px solid #ffbb00;
+}
+
+  .p-choices-form input:focus + label {
+    box-shadow: 0 0 0 2px #ffbb00;
+    border-color: var(--cor-12);
+  }
+

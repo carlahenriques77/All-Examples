@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.container-content {
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.button {
+    background: linear-gradient(#ffbf00, #f2a50c);
+    padding: 12px 16px;
+    border-radius: 4px;
+    justify-self: flex-start;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.button-2 {
+    color: white;
+    padding: 10px 20px;
+    display: inline;
+    justify-self: self-start;
+    margin-top: 17px;
+    border-radius: 4px;
+}

@@ -1,0 +1,9 @@
+.b-header {
+    padding: 40px 0px !important;
+}
+
+@media (min-width: 800px) {
+    .b-header {
+        padding: 60px 0px !important;
+    }    
+}

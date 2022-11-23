@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    background: #F7F7F7;
+    gap: 50px;
+}
+
+header {
+    display: grid;
+    gap: 40px;
+    justify-items: center;
+    margin-top: 60px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+    padding: 0px;
+}
+
+nav a {
+    text-decoration: none;
+    background: white;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border: 3px solid white;
+}
+
+nav a:hover {
+    border: 3px solid #EE2211;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1000px;
+}
+
+article {
+    display: grid;
+    padding: 40px;
+    background: white;
+    text-align: right;
+    align-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+article h1 {
+    font-size: 2rem;
+}
+
+article p {
+    font-size: 1.3rem;
+}
+
+article a {
+    text-decoration: none;
+    color: white;
+    background: #EE2211;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    justify-self: right;
+    border-radius: 4px;
+}
+
+article a:hover {
+    background: #c71d0d;
+}
+
+span.redline {
+    width: 60px;
+    height: 4px;
+    background: #EE2211;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+div.ghosttext {
+    font-size: 3rem;
+    color: rgba(128, 128, 128, 0.786);
+    align-self: center;
+    text-align: right;
+    margin-right: 30px;
+}
+
+div.pros {
+    padding: 40px;
+    display: grid;
+    gap: 15px;
+    background: white;
+}
+
+div.pros1 {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+div.pros1:hover {
+    border-left: 3px solid #EE2211;
+}
+
+div.pros1 p {
+    grid-column: 2;
+}
+
+div.pros1:nth-child(odd) {
+    background: #F7F7F7;
+}
+
+img.pros1img {
+    display: inline;
+    width: 14px;
+}
+
+h3 {
+    display: inline;
+}

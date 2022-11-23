@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>(BETA) Bicicletas | Bikcraft</title>
+  <meta name="description" content="Bicicletas">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+        box-shadow: 0 0 0 2px red;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto; /* Useless here(?)*/
+        display: block;
+    }
+
+    .bicicletas-bg {
+        background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
+    }
+  
+    .bicicletas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: url("../../img/dec/top-right.svg") no-repeat top 40px right 20px;
+     }
+  
+    .bicicletas-imagem {
+        display: grid;
+    }
+    
+    .bicicletas-imagem img {
+        grid-area: 1/1;
+    }
+  
+    .bicicletas-imagem span {
+        grid-area: 1/1;
+        place-self: start end;
+        margin-top: 20px;
+        background: var(--cor-12);
+        display: inline-block;
+        padding: 8px 16px 8px 8px;
+        border-radius: 4px 0 0 4px;
+    }
+    
+    .bicicletas-conteudo {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-content: start;
+    }
+    
+    .bicicletas h2,
+    .bicicletas p {
+        grid-column: 1/-1;
+    }
+    
+    .bicicletas h2 {
+        margin-bottom: 20px;
+    }
+    
+    .bicicletas h2::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 8px;
+        background-color: var(--cor-p1);
+        margin-bottom: 8px;
+    }
+    
+    .bicicletas p {
+        margin-bottom: 32px;
+    }
+    
+    .bicicletas a {
+        place-self: end;
+    }
+    
+    .bicicletas li {
+        display: flex;
+        align-items: center;
+    }
+    
+    .bicicletas ul {
+        display: grid;
+        gap: 16px;
+    }
+    
+    .bicicletas-conteudo img {
+        width: 24px;
+        margin-right: 8px;
+    }
+    
+    @media (max-width: 800px) {
+        .bicicletas-bg {
+        background: var(--cor-11);
+        }
+        .bicicletas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .bicicletas-conteudo {
+        grid-template-columns: 1fr;
+        }
+        .bicicletas ul {
+        font-size: 1rem;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 32px;
+        }
+        .bicicletas a {
+        place-self: start;
+        }
+    }
+
+    .container {
+        box-sizing: border-box;
+        max-width: 1200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .botao {
+        display: inline-block;
+        padding: 16px 32px;
+        background: linear-gradient(#ffbf00, #f2a50c);
+        border-radius: 4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+        color: var(--cor-p5);
+        font: 600 1.125rem/1.35 "Poppins", sans-serif;
+        max-width: max-content;
+        border: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        .botao {
+        padding: 12px 16px;
+        font-size: 1rem;
+        }
+    }
+
+    .botao.seta {
+  display: flex;
+  align-items: center;
+}
+
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("https://www.origamid.com/projetos/bikcraft/img/icones/seta.svg");
+  transition: transform 0.2s;
+}
+
+.botao.seta:hover::after {
+  transform: translateX(4px);
+}
+  
+  </style>
+</head>
+
+<body id="bicicletas">
+  <main>
+    <div class="titulo-bg">
+      <div class="titulo container">
+        <p class="cor-5">Escolha a melhor para você</p>
+        <h1 class="cor-0">nossas bicicletas<span class="cor-p1">.</span></h1>
+      </div>
+    </div>
+
+    <div class="bicicletas container">
+      <div class="bicicletas-imagem">
+        <img src="https://www.origamid.com/projetos/bikcraft/img/bicicletas/nimbus.jpg" alt="Bicicleta preta">
+        <span class="cor-0">R$ 4999</span>
+      </div>
+      <div class="bicicletas-conteudo">
+        <h2>Nimbus Stark</h2>
+        <p class="cor-8">A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.</p>
+        <ul class="cor-8">
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Motor Elétrico
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Fibra de Carbono
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            50 km/h
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Rastreador
+          </li>
+        </ul>
+        <a class="botao seta" href="./bicicletas/nimbus.html">Mais Sobre</a>
+      </div>
+    </div>
+
+    <div class="bicicletas-bg">
+      <div class="bicicletas container">
+        <div class="bicicletas-imagem">
+          <img src="https://www.origamid.com/projetos/bikcraft/img/bicicletas/nimbus.jpg" alt="Bicicleta preta">
+          <span class="cor-0">R$ 2499</span>
+        </div>
+        <div class="bicicletas-conteudo">
+          <h2 class="cor-0">Magic Might</h2>
+          <p class="cor-5">A Magic Might é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.</p>
+        <ul class="cor-8">
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Motor Elétrico
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Fibra de Carbono
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            50 km/h
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Rastreador
+          </li>
+        </ul>
+          <a class="botao seta" href="./bicicletas/magic.html">Mais Sobre</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bicicletas container">
+      <div class="bicicletas-imagem">
+        <img src="https://www.origamid.com/projetos/bikcraft/img/bicicletas/nimbus.jpg" alt="Bicicleta preta">
+        <span class="cor-0">R$ 3999</span>
+      </div>
+      <div class="bicicletas-conteudo">
+        <h2>Nebula Cosmic</h2>
+        <p class="cor-8">A Nebula Cosmic é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.</p>
+         <ul class="cor-8">
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Motor Elétrico
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Fibra de Carbono
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            50 km/h
+          </li>
+          <li>
+            <img src="https://www.origamid.com/projetos/bikcraft/img/icones/eletrica.svg" alt="">
+            Rastreador
+          </li>
+        </ul>
+        <a class="botao" href="./bicicletas/nebula.html">Mais Sobre</a>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

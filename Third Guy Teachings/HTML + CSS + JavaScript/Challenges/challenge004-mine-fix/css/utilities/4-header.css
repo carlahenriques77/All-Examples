@@ -1,0 +1,19 @@
+@charset "UTF-8"; 
+
+.b-header {
+    padding: 30px 0 0 0;
+  }
+
+.b-header-content {
+    padding: 0 20px;
+}
+
+@media (min-width: 800px) {
+  .b-header-content h2 {
+      font-size: 1.3rem;
+  }
+
+  .b-header-content h1 {
+      font-size: 3.5rem;
+  }
+}

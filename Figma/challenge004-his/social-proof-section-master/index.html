@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        font-size: 15px;
+      }
+
+      section {
+        background-image: url("images/bg-pattern-top-desktop.svg");
+        min-height: 100vh;
+        background-repeat: no-repeat;
+      }
+
+      .row {
+        max-width: 80%;
+        margin: 0 auto 80px auto;
+      }
+
+      .top-layer {
+        position: relative;
+        top: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .main-text {
+        flex-basis: 50%;
+      }
+
+      .main-text h1 {
+        color: hsl(300, 43%, 22%);
+        font-weight: 700;
+        font-size: 50%;
+      }
+
+      .main-text p {
+        color: hsl(303, 20%, 53%);
+        line-height: 200%;
+      }
+
+      .rating {
+        background-color: hsl(300, 24%, 96%);
+        padding: 20px;
+        display: flex;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      .rating-1 {
+        right: 90px;
+      }
+
+      .rating-2 {
+        right: 50px;
+      }
+
+      .rating-3 {
+        right: 0px;
+      }
+
+      .rating p {
+        font-weight: bold;
+        color: hsl(300, 43%, 22%);
+        margin-left: 15px;
+      }
+
+      .bottom-layer {
+        display: flex;
+        position: relative;
+        top: 50px;
+        bottom: 50px;
+      }
+
+      .card {
+        background-color: hsl(300, 43%, 22%);
+        width: 350px;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 50px;
+        position: relative;
+      }
+
+      .card-2 {
+        top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      .card-3 {
+        top: 30px;
+      }
+
+      .card-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .card-info .info {
+        margin-left: 20px;
+        line-height: 120%;
+      }
+
+      .card-info .info h2 {
+        color: #fff;
+        font-size: 15px;
+      }
+
+      .card-info .info p {
+        color: hsl(333, 80%, 67%)
+      }
+
+      .card q {
+        color: #fff;
+        font-size: 22px;
+      }
+
+      .card q p {
+        display: inline;
+        font-size: 14px;
+      }
+
+      .card img {
+        border-radius: 50%;
+        width: 50px;
+      }
+
+      .card .card-content {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        section {
+          background-image: url(images/bg-pattern-top-mobile.svg);
+        }
+
+        .top-layer {
+          flex-direction: column;
+        }
+
+        .main-text {
+          text-align: center;
+        }
+
+        .main-text h1 {
+          font-size: 30px;
+        }
+
+        .main-text p {
+          font-size: 13px;
+          padding: 20px 0;
+        }
+
+        .rating {
+          position: relative;
+          right: 0;
+          flex-direction: column;
+        }
+
+        .rating .img-star {
+          margin-bottom: 10px;
+        }
+
+        .bottom-layer {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .card {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .card-3 {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="top-layer">
+        <div class="main-text">
+          <h1>10,000+ of our users love our products.</h1>
+          <p>We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p>
+        </div>
+        <div class="reviews">
+            <div class="rating rating-1">
+              <div class="img-star">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+              </div>
+              <p>Rated 5 Stars in Reviews</p>
+            </div>
+            <div class="rating rating-2">
+              <div class="img-star">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+              </div>
+              <p>Rated 5 Stars in Report Guru</p>
+            </div>
+            <div class="rating rating-3">
+              <div class="img-star">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+                <img src="images/icon-star.svg" alt="">
+              </div>
+              <p>Rated 5 Stars in BestTech</p>
+            </div>
+            
+
+        </div>
+      </div>
+      <!-- -------------BOTTOM LAYER------------- -->
+      <div class="bottom-layer">
+        <div class="card card-1">
+          <div class="card-info">
+            <div class="img">
+              <img src="images/image-colton.jpg" alt="">
+            </div>
+            <div class="info">
+              <h2>Colton Smith</h2>
+              <p>Verified Buyer</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <q><p>We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! </p></q>
+          </div>
+        </div>
+        <div class="card card-2">
+          <div class="card-info">
+            <div class="img">
+              <img src="images/image-colton.jpg" alt="">
+            </div>
+            <div class="info">
+              <h2>Colton Smith</h2>
+              <p>Verified Buyer</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <q><p>We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! </p></q>
+          </div>
+        </div>
+        <div class="card card-3">
+          <div class="card-info">
+            <div class="img">
+              <img src="images/image-colton.jpg" alt="">
+            </div>
+            <div class="info">
+              <h2>Colton Smith</h2>
+              <p>Verified Buyer</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <q><p>We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! </p></q>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

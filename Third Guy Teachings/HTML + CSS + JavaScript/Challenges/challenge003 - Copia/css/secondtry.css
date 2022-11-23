@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+test-colors {
+    color:  #cccccc #8f8f8f #a3a3a3 #b6f829 #65dd0a #f5f5f5 
+    #e0e0e0 #525252 #141414;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../../../FiraSans-Regular.otf') format('opentype');
+}
+
+@media all {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Fira Sans';
+        list-style: none;
+    }
+
+    header {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    nav li {
+        padding: 10px 20px;
+        background: #f5f5f5;
+        border-radius: 4px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.1rem;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        padding: 60px 0px;
+    }
+
+    div.article-info {
+        padding: 15px 0px 0px 40px;
+        display: grid;
+        gap: 15px;
+        position: relative;
+    }
+
+    div.article-info::before {
+        content: '';
+        height: 10px;
+        width: 30px;
+        background: url('https://www.origamid.com/projetos/portfolio/img/detalhe.svg') no-repeat center;
+        position: absolute;
+        left: 42px;
+        top: 7px;
+    }
+
+    article h1 {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .gray-text {
+        color: #6d6d6d;
+        font-size: 1.5rem;
+    }
+
+    .light-text {
+        color: #6d6d6d;
+    }
+
+    .max-text {
+        max-width: 40ch;
+    }
+
+    .lighter-text {
+        font-size: 1.2rem;
+        color:#525252;
+    }
+
+    strong.black-text {
+        color: black;
+        font-weight: bolder;
+    }
+
+    p.experience-info {
+        line-height: 26px;
+        margin-bottom: 60px;
+    }
+
+    section.experience h1 {
+        font-size: 3rem;
+    }
+
+    div.experience-boxes {
+        margin: 30px 0px;
+    }
+
+    div.experience-box {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f5f5f5;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        position: relative;
+    }
+
+    div.experience-box::before {
+        content: '';
+        background-image: linear-gradient(#b6f829, #65dd0a);
+        height: 20px;
+        width: 5px;
+        position: absolute;
+        left: -5px;
+        top: 23px;
+    }
+
+    div.experience-box p {
+        line-height: 20px;
+    }
+
+    div.experience-box p, li {
+        font-size: 0.9rem;
+    }
+
+    div.experience-box ul {
+        display: flex;
+        grid-column: 2;
+        grid-row: 2;
+        flex-wrap: wrap;
+        align-self: start;
+        gap: 5px;
+    }
+
+    div.experience-box li {
+        background: white;
+        padding: 6px 11px;
+        border-radius: 4px;
+    }
+
+    div.first-part-of-the-footer {
+        color: white;
+        background: #141414;
+        padding: 60px 0px;
+    }
+
+    div.first-part-of-the-footer h1 {
+    font-size: 3rem;
+    }
+    
+    div.formation {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        gap: 30px;
+        margin-bottom: 60px;
+        padding: 0 20px;
+    }
+
+    div.margin-bottom-formation {
+        margin-bottom: 60px;
+    }
+
+    .light-gray-text {
+        font-size: 1.2rem;
+        color: #a3a3a3;
+    }
+
+    .white-strong {
+        color: white;
+    }
+
+    ul.first-footer-boxes {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+    
+    li.first-footer-box {
+        padding: 20px;
+        background: black;
+        display: flex;
+        gap: 30px;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+    }
+
+    li.first-footer-box::before {
+        content: '';
+        background-image: linear-gradient(#b6f829, #65dd0a);
+        height: 20px;
+        width: 4px;
+        position: absolute;
+        left: -3px;
+        top: 47px;
+    }
+
+    li.first-footer-box h3 {
+        color: gray;
+        font-size: 0.9rem;
+    }
+
+    .margin-bottom-h3 {
+        margin-bottom: 10px;
+    }
+
+    li.first-footer-box p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    div.courses-and-languages{
+        margin-bottom: 30px;
+    }
+
+    div.courses-and-languages h4 {
+        margin-bottom: 20px;
+        color: #8f8f8f;
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+
+    div.courses-and-languages p { 
+        line-height: 40px;
+        font-size: 1.1rem;
+    }
+
+    div.courses-maybe {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    footer {
+        background: black;
+        color: white;
+        padding: 0 20px;
+    }
+
+    div.footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 120px 0px 40px 0px;;
+        position: relative;
+    }
+
+    div.footer-content::before {
+        background: url('https://www.origamid.com/projetos/portfolio/img/detalhe.svg') no-repeat center;
+        content: '';
+        height: 103px;
+        width: 138px;
+        position: absolute;
+        top: -41px;
+        left: -8px
+    }
+
+    p.avaliable-text {
+        font-size: 1.5rem;
+        color: #cccccc;
+        line-height: 30px;
+    }
+
+    footer a {
+        color: white;
+    } 
+    
+    div.contact-here {
+        margin: 40px 0px;
+        line-height: 50px;
+        font-size: 1.5rem;    
+    }
+
+    p.copyright {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 620px) {
+    article h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 700px) {
+    header {
+        display: grid;
+        justify-items: flex-end;
+        margin-top: 40px;
+        grid-template-columns: auto 1fr;
+    }
+
+    nav li {
+        padding: 10px 20px;
+        background: none;
+    }
+
+    article {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    div.article-info {
+        gap: 30px;
+        align-self: center;
+        padding: 0px;
+        margin-left: 70px;
+    }
+
+    div.article-info::before {
+        content: '';
+        height: 103px;
+        width: 134px;
+        background: url('https://www.origamid.com/projetos/portfolio/img/detalhe.svg') no-repeat center;
+        position: absolute;
+        left: -34px;
+        top: -25px;
+        z-index: -1;
+    }
+    
+    article h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+        line-height: 50px;
+    }
+
+    section.experience {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 44px;
+    }
+
+    section.experience h1 {
+        font-size: 8rem;
+        word-break: break-all;
+        text-transform: uppercase;
+        color: #E0E0E0;
+        line-height: 127px;
+        width: 4ch;
+    }
+
+    div.experience-box h3 {
+        position: relative;
+    }
+
+    div.experience-box span {
+        position: absolute;
+        top: 22px;
+        left: -51px;
+    }
+
+    span.that-number {
+        left: -74px !important; 
+    }
+
+    div.formation {
+        display: grid;
+        gap: 30px;
+        margin-bottom: 60px;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    div.first-part-of-the-footer h1 {
+        font-size: 9rem;
+        word-break: break-all;
+        color: black;
+        text-transform: uppercase;
+        max-width: 5ch;
+    }
+
+    div.footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 80px 0px;
+        gap: 100px;
+    }
+
+    div.contact-here {
+        margin: 0px;
+        line-height: 78px;
+        font-size: 2rem;
+    }
+
+    .avaliable-text {
+        align-self: center;
+    }
+}
+
+@media (min-width: 800px) {
+    article h1 {
+        font-size: 4.5rem;
+        line-height: 72px;
+    }
+}
+
+@media (min-width: 1300px) {
+    header, main, div.formation, footer {
+        padding: 0px 0px;
+    }
+
+    .experience-info {
+        line-height: 30px;
+        font-size: 1.7rem;
+    }
+}

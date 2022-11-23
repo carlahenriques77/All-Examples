@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: League Spartan;
+        /* box-shadow: 0 0 0 2px red; */
+      }
+
+      body {
+        background-color: white;
+        min-height: 100vh;
+        display: flex;
+        place-content: center;
+        background-image: url("images/bg-pattern-top-mobile.svg");
+        background-repeat: no-repeat;
+      }
+
+      h1 {
+        font-size: 56px;    
+        margin: 0 0 17px 0;
+      }
+
+      .container {
+        padding: 50px 20px;
+        display: grid;
+        margin: auto;
+        max-width: 1200px;
+}
+
+      .info h1,
+      .info p {
+        text-align: center;
+      }
+
+      .info p {
+        font-size: 19px;
+        line-height: 1.5;
+        color: #927B91;
+      }
+
+      .reviews {
+        margin: auto;
+        display: grid;
+        margin: 30px 0;
+        gap: 16px;
+      }
+
+      .reviews div {
+        background-color: hsl(300, 24%, 96%);
+        text-align: center;
+        padding: 4px 20px;
+        border-radius: 4px;
+      }
+
+      .reviews div p {
+        font-size: 17px;
+        color: #512051;
+        font-weight: 700;
+      }
+
+      .star {
+        display: flex;
+        gap: 8px;
+      }
+
+      .rating {
+        display: grid;
+        place-items: center;
+        gap: 4px;
+      }
+
+      .talk-div {
+        background: #512051;
+        color: white;
+        padding: 20px;
+        border-radius: 4px;
+      }
+
+      .talk-div img {
+        border-radius: 50%;
+        width: 40px;
+      }
+
+      .profile-pic {
+        display: grid;
+        gap: 23px;
+        grid-template-columns: max-content max-content;
+        align-items: center;
+        margin: 0 0 23px 0;
+      }
+
+      h2 {
+        margin: 0 0 4px 0;
+      }
+
+      h2,
+      span,
+      blockquote {
+        font-size: 17px;
+      }
+
+      span {
+        color: #EE69A4;
+      }
+
+      blockquote {
+        line-height: 1.5;
+        text-indent: 5px;
+      }
+
+      .profile-pic span {
+        grid-column: 2;
+      }
+
+      .talk-con {
+        display: grid;
+        gap: 16px;
+      }
+
+      @media (min-width: 800px) {
+        body {
+          background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+          background-repeat: no-repeat, no-repeat;
+          background-position: top 0px left 0px, bottom -56px right -4px;
+        }
+
+        .container {
+          display: block;
+        }
+        .container1 {
+          grid-template-columns: 1fr 1fr;
+          gap: 126px;
+          display: grid;
+        }
+
+        h1 {
+          max-width: 15ch;
+          text-align: left;
+        }
+
+        .info p {
+          text-align: left;
+        }
+
+        .reviews {
+          margin: 0;
+          display: flex;
+          gap: 16px;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .reviews div {
+          min-width: 16ch;
+        }
+
+        .reviews div p {
+          min-width: 22ch;
+        }
+
+        .rating {
+          justify-content: center;
+          gap: 4px;
+          grid-template-columns: 1fr 1fr;
+          position: relative;
+        }
+
+        .rating-1 {
+          right: 80px;
+        }
+
+        .rating-2 {
+          right: 50px;
+        }
+
+        .rating-3 {
+          right: 30px;
+        }
+
+        .talk-con {
+          grid-template-columns: 1fr 1fr 1fr;
+          margin: 71px 0 0 0;
+        }
+
+        .talk-div {
+          position: relative;
+        }
+
+        .t1 {
+          bottom: 30px;
+        }
+
+        .t2 {
+          bottom: 20px;
+        }
+
+        .t3 {
+          bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="container1">
+        <div class="info">
+          <h1>10,000+ of our users love our products.</h1>
+          <p>We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.
+          </p>
+        </div>
+        <div class="reviews">
+          <div class="rating rating-1">
+            <div class="star">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+            </div>
+            <p>Rated 5 Stars in Reviews</p>
+          </div>
+          <div class="rating rating-2">
+            <div class="star">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+            </div>
+            <p>Rated 5 Stars in Report Guru</p>
+          </div>
+          <div class="rating rating-3">
+            <div class="star">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+              <img src="images/icon-star.svg" alt="">
+            </div>
+            <p>Rated 5 Stars in BestTech</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-con">
+
+        <div class="talk-div t1">
+
+          <div class="profile-pic">
+
+            <img src="images/image-colton.jpg" alt="">
+            <div>
+              <h2>Colton Smith</h2>
+              <span>Verified Buyer</span>
+            </div>
+
+          </div>
+
+          <blockquote>
+            "We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"
+          </blockquote>
+
+        </div>
+
+        <div class="talk-div t2">
+
+          <div class="profile-pic">
+
+            <img src="images/image-colton.jpg" alt="">
+            <div>
+              <h2>Colton Smith</h2>
+              <span>Verified Buyer</span>
+            </div>
+
+          </div>
+
+          <blockquote>
+            "We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"
+          </blockquote>
+
+          
+        </div>
+
+        <div class="talk-div t3">
+
+          <div class="profile-pic">
+
+            <img src="images/image-colton.jpg" alt="">
+            <div>
+              <h2>Colton Smith</h2>
+              <span>Verified Buyer</span>
+            </div>
+
+          </div>
+
+          <blockquote>
+            "We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"
+          </blockquote>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

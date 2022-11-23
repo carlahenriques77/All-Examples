@@ -1,0 +1,72 @@
+.i-faq-section {
+    padding: 60px 0px;
+}
+
+.i-faq-section h1 {
+    margin: 0 20px 30px 20px;
+}
+
+.i-faq-container {
+    margin: 0 20px;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.i-faq-section dt {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.i-faq-section dt {
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.i-faq-section dd {
+    line-height: 1.5;
+    padding: 20px 0 0 20px;
+    max-width: 75ch;
+}
+
+.i-faq-container:nth-child(even) {
+    background: white;
+}
+
+.i-faq-section dt::before {
+    content: "";
+    background: #FFBB00;
+    height: 8px;
+    width: 13px;
+    display: inline-block;
+    position: absolute;
+    left: 1px;
+}
+
+.i-faq-section dt::after {
+    background: url("https://www.origamid.com/projetos/bikcraft/img/icones/seta-abrir.svg") no-repeat;
+    width: 15px;
+    height: 10px;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    right: 1px;
+    transition: transform 0.2s;
+}
+
+.i-faq-section dt:hover::after {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 800px) {
+    .i-faq-section {
+        padding: 100px 0px;
+    }
+
+    .i-faq-section h1 {  
+        font-size: 3rem;
+        margin: 0px 20px 50px 20px;
+    }
+}

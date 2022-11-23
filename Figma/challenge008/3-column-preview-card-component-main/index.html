@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap');
+
+    * { 
+      box-shadow: 0 0 0 2px red;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      background: #F2F2F2;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 1050px;
+    }
+
+    .card {
+      padding: 48px;
+      color: rgba(255, 255, 255, 0.782);
+    }
+
+    .ball {
+      background: #000000;
+      content: "";
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      mix-blend-mode: overlay;
+      margin: 0 0 35px 0;
+    }
+
+    .ball-1::after {
+      background: url("images/icon-sedans.svg") no-repeat;
+      display: block;
+      width: 100px;
+      height: 40px;
+      content: "";
+      mix-blend-mode: normal;
+    }
+
+    .ball-2::after {
+      background: url("images/icon-suvs.svg") no-repeat;
+      display: block;
+      width: 100px;
+      height: 40px;
+      content: "";
+      mix-blend-mode: normal;
+    }
+
+    .ball-3::after {
+      background: url("images/icon-luxury.svg") no-repeat;
+      display: block;
+      width: 100px;
+      height: 40px;
+      content: "";
+      mix-blend-mode: normal;
+    }
+
+    h1 {
+      color: #F2F2F2;
+      font-family: Big Shoulders Display;
+      text-transform: uppercase;
+      margin: 0 0 25px 0;
+      font-size: 40px;
+    }
+
+    p {
+      margin: 0 0 83px 0;
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    p,
+    a {
+      font-family: Lexend Deca;
+    }
+
+    .card-1 {
+      background: #E28625;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .card-2 {
+      background: #006971;
+      border-radius: 0;
+    }
+
+    .card-3 {
+      background: #004140;
+      border-radius: 0 10px 10px 0;
+    }
+
+    a {
+      background: white;
+      padding: 11px 31px;
+      border-radius: 25px;
+      border: 3px solid white;
+    }
+
+    a:active {
+      background: transparent;
+      color: white !important;
+    }
+
+    .card-1 a {
+      color: #E28625;
+    }
+
+    .card-2 a {
+      color: #006971;
+    }
+
+    .card-3 a {
+      color: #004140;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 20px !important;
+      }
+
+      p {    
+        max-width: 41ch;
+      }
+
+      .card-1 {
+        border-radius: 10px 10px 0 0px;
+      }
+
+      .card-2 {
+        
+      }
+
+      .card-3 {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card card-1">
+      <div class="ball ball-1">
+
+      </div>
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <a href="@">Learn More</a>
+    </div>
+
+    <div class="card card-2">
+      <div class="ball ball-2">
+
+      </div>
+      <h1>SUVs</h1>
+      <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.
+      </p>
+      <a href="@">Learn More</a>
+    </div>
+
+    <div class="card card-3">
+      <div class="ball ball-3">
+
+      </div>
+      <h1>Luxury</h1>
+      <p>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.
+      </p>
+      <a href="@">Learn More</a>
+    </div>
+  </div>
+</body>
+</html>

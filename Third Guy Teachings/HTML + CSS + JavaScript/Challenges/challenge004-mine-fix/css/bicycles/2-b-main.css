@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.b-bike-box {
+    padding: 60px 20px;
+    align-items: start;
+}
+
+.b-box-info {
+    display: grid;
+    gap: 20px;
+}
+
+.b-box-info h3 {
+    margin: 20px 0 0 0;
+}
+
+.b-bike-box ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+}
+
+.b-bike-box li {
+    display: flex;
+    align-items: center;
+}
+
+.b-bike-box ul img {
+    width: 26px;
+    margin: 0 10px 0 0;
+}
+
+.b-box-image {
+    display: grid;
+}
+
+.b-box-image img {
+    grid-area: 1/1;
+}
+
+.b-box-image span {
+    grid-area: 1/1;
+    color: white;
+    background: black;
+    place-self: start end;
+    margin: 20px 0 0 0;
+    font-size: 1.15rem;
+    border-radius: 4px 0 0 4px;
+    padding: 5px;
+}
+
+.b-box-info a {
+    display: flex;
+    align-items: center;
+}
+
+.b-box-info a::after {
+    content: "";
+    background: url("https://www.origamid.com/projetos/bikcraft/img/icones/seta.svg") no-repeat;
+    width: 19px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.1s;
+}
+
+.b-box-info a:hover::after {
+    transform: translate(4px);
+}
+
+.b-bike-box-black {
+    color: white;
+    background: #111111;
+}
+
+.b-bike-box-black p,
+.b-bike-box-black li {
+    color: #b2b2b2;
+}
+
+
+.b-pros-container {
+    display: grid;
+    gap: 25px;
+}
+
+@media (min-width: 600px) {
+    .b-bike-box ul {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .b-bike-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .b-box-info {
+        grid-template-columns: 1fr auto;
+    }
+
+    .b-bike-box h3 {
+        font-size: 1.9rem;
+        margin: 0;
+    }
+
+    .b-bike-box h3,
+    .b-bike-box p {
+        grid-column: span 2;
+    }
+
+    .b-bike-box a {
+        align-self: end;
+    }
+
+    .b-bike-box ul {
+        gap: 18px;
+    }
+
+    .b-bike-box-black {
+        background: linear-gradient(to right, white 30%, black 0%);
+    }
+}

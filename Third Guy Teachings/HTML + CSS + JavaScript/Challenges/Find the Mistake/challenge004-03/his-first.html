@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/his.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            color: white;
+            box-shadow: 0 0 0 2px red;
+        }
+
+        header {
+            background-color: var(--cor-12);
+        }
+
+        .container {
+            box-sizing: border-box;
+            max-width: 1200px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+         ul a {
+            display: inline-block;
+            padding: 16px 0px;
+            position: relative;
+        } 
+
+        ul a:after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0px;
+            background: var(--cor-0);
+            margin-top: 4px;
+            transition: 0.3s;
+            position: absolute;
+        }
+
+        ul a:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header">
+            <a href="./">
+                <img src="https://www.origamid.com/projetos/bikcraft/img/bikcraft.svg" alt="Bikcraft">
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="./bicicletas.html">Bicicletas</a></li>
+                    <li><a href="./seguros.html">Seguros</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>

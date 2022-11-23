@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/migueweb/frontend-mentor-challenges/blob/main/img/favicon.png?raw=true">
+  
+  <title>Single Price Grid Component</title>
+
+  <link rel="stylesheet" href="./css/styles.min.css">
+
+  <style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+}
+
+
+.container__section-join{
+    background-color: white;
+    grid-area: a;
+}
+
+.container__section-subscription{
+    background-color: hsl(179, 62%, 40%);
+    grid-area: b;
+}
+
+.container__section-why{
+    background-color: hsl(179, 62%, 43%);
+    grid-area: c;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2fr 260px 260px 2fr;
+    grid-template-rows: 1fr min-content min-content 1fr;
+    grid-template-areas:   
+        ". . . ."
+        ". a a ."
+        ". b c ."
+        ". . . .";
+    box-shadow: 0px 13px 10px black;
+}
+
+.container__section-join{
+    padding: 30px 30px 30px 30px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.container__title{
+    font-size: 17px;
+
+    color: hsl(189, 100%, 27%);
+    font-weight: 700;
+    padding-bottom: 18px;
+    line-height: 1.6;
+}
+
+.container__section-join .container__header .container__subtitle{
+    font-size: 14px;
+    padding-bottom: 8px;
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+}
+
+.container__section-join .container__description{
+    font-size: 13px;
+    line-height: 1.7;
+    color: hsl(218, 22%, 67%);
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+
+
+.container__section-subscription{
+    padding: 30px 30px 30px 30px;
+    border-bottom-left-radius: 6px;
+}
+
+.container__section-subscription .container__header{
+    margin-bottom: 14px;
+}
+
+.container__price{
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.container__price--font-size{
+    font-size: 13px;
+    color: hsl(204, 43%, 93%, 0.4);
+    font-weight: 400;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.container__title--color-white{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0;
+}
+
+.container__section-subscription .container__description{
+    color: hsl(204, 43%, 93%);
+    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.container__button{
+    background-color: hsl(71, 73%, 54%);
+    color: hsl(204, 43%, 93%);
+    display: block;
+    width: 95%;
+    border: none;
+    padding: 10px 0;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+    font-size: 11px;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px #6d6c6c94;
+}
+
+
+
+.container__section-why{
+    padding: 30px 30px 30px 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 6px;
+}
+
+.container__section-why .container__title{
+    color: hsl(204, 43%, 93%);
+    padding-bottom: 8px;
+    font-size: 15px;
+}
+
+.container__section-why .container__description{
+    padding: 0;
+    list-style-type: none;
+    color: hsl(204, 43%, 93%);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 682px) and (orientation: portrait) {
+
+    .container{
+        height: 100vh;
+        grid-template-columns: 1fr 12fr 1fr;
+        grid-template-rows: 1fr min-content min-content min-content 1fr;
+        grid-template-areas: 
+            ". . ."
+            ". a ."
+            ". b ."
+            ". c ."
+            ". . .";
+    }
+
+    .container__section-join{
+        padding: 20px 20px 20px 20px;
+    }
+
+    .container__section-join .container__description{
+        font-size: 12px;
+    }
+
+
+    .container__section-subscription{
+        padding: 16px 20px 20px 20px;
+        border-bottom-left-radius: 0;
+    }
+
+
+    .container__section-why{
+        padding: 18px 20px 20px 20px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
+  </style>
+</head>
+<body>
+
+  <main class="wrapper row">
+
+    <header class="section header col-12">
+      <h1>Join our community</h1>
+      <h2>30-day, hassle-free money back guarantee</h2>
+      <p>Gain access to our full library of tutorials along with expert code reviews. 
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </header>
+
+    <article class="section subscription col-12 col-lg-6">
+      <h2>Monthly Subscription</h2>
+      <div class="price">
+        <div class="cost">
+          <span>&dollar;29</span> per month
+        </div>
+
+        <p>  Full access for less than &dollar;1 a day</p>
+      </div>
+      <a href="#" class="sign-up">Sign Up</a>
+    </article>
+
+    <section class="section why-us col-12 col-lg-6">
+      <h2>Why Us</h2>
+      <p>
+        Tutorials by industry experts
+        Peer &amp; expert code review
+        Coding exercises
+        Access to our GitHub repos
+        Community forum
+        Flashcard decks
+        New videos every week
+      </p>
+
+    </section>
+
+  </main>
+    
+</body>
+</html>

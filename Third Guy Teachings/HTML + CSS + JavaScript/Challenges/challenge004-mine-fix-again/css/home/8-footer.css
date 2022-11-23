@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+    .bikcraft-logo {
+        display: none;
+    }
+
+    .footer a:hover {
+        color: white;
+    }
+
+    footer {
+        background: black;
+    }
+
+    .footer {
+        padding: 50px 20px;
+        color: white;
+    }
+
+    .footer h2 {
+        margin-bottom: 30px;
+    }
+
+    .footer a, .footer li {
+        color: #b2b2b2;
+    }
+
+    .contact-ul li:nth-child(even)::after {
+        content: "";
+        display: block;
+        max-width: 414px;
+        height: 1px;
+        background: rgba(128, 128, 128, 0.405);
+        margin-top: 15px;
+    }
+
+    .contact-ul {
+        color: gray;
+    }
+
+    .contact-ul li {
+        margin-bottom: 20px;
+    }
+
+    .social-logos {
+        display: flex;
+        gap: 30px;
+    }
+
+    .information-h2 {
+        margin-top: 30px;
+    }
+
+    .navigation-ul {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    p.copyright {
+        margin: 40px 0 0px;
+        color: #9c9c9c;
+    }
+
+@media (min-width: 608px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px 50px;
+    }
+
+    .information-h2 {
+        margin: 0 0 30px;
+    }
+
+    p.copyright {
+        grid-column: 1/-1;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .footer {
+         display: grid;
+         grid-template-columns: 3fr 5fr 4fr; /* ???? */
+         gap: 40px;
+         padding-top: 60px;
+         padding-bottom: 60px;
+     }
+ 
+     .footer h2 {
+         font-size: 1.3rem;
+     }
+ 
+ 
+     .bikcraft-logo {
+         display: block;
+     }
+ }

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+section.friends {
+    padding: 0 20px;
+}
+
+.friends h2 {
+    margin: 50px 0px 20px 0px;
+}
+
+ul.friends-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+ul.friends-boxes li {
+    display: flex;
+    padding: 32px;
+}
+
+.friends-boxes img {
+    margin: auto;
+} 
+
+ul.friends-boxes li:nth-child(even) {
+    border-left: 2px solid #B2B2B2;
+}
+
+ul.friends-boxes li:nth-child(n + 3) {
+    border-top: 2px solid #B2B2B2;
+}
+
+
+
+
+section.ana-cursive {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+div.ana-image {
+    background: url('../img/depoimento.jpg') no-repeat center center;
+    height: 250px;
+    background-size: cover;
+}
+
+.ana-box {
+    background: #FFBB00;
+    padding: 0 40px;
+}
+
+.ana-box-box {
+    padding: 30px;
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+}
+
+.ana-text {
+    text-align: center;
+}
+
+.ana-text {
+    position: relative;
+    max-width: 32ch;
+}
+
+.ana-text::before,
+.ana-text::after {
+    position: absolute;
+    font-size: 76px;
+    color: rgba(0, 0, 0, 0.266);
+}
+
+.ana-text::before {
+    content: "“";
+    top: -29px;
+    left: -43px;
+}
+
+.ana-text::after {
+    content: "”";
+}

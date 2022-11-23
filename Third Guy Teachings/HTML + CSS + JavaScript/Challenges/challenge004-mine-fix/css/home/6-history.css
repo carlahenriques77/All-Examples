@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+    .ana-cursive {
+        background: #FFBB00;
+    }
+
+    .ana-image {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .ana-content {
+        display: grid;
+        grid-template-rows: 200px 1fr;
+    }
+
+    .ana-box {
+        padding: 30px;
+        display: grid;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .ana-text {
+        text-align: center;
+    }
+
+    .ana-text {
+        position: relative;
+        max-width: 32ch;
+    }
+
+    .ana-text::before,
+    .ana-text::after {
+        position: absolute;
+        font-size: 76px;
+        color: rgba(0, 0, 0, 0.266);
+    }
+
+    .ana-text::before {
+        content: "“";
+        top: -29px;
+        left: -43px;
+    }
+
+    .ana-text::after {
+        content: "”";
+    }
+
+@media (min-width: 800px) {
+    .ana-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+    .ana-box {
+        align-self: flex-end;
+        gap: 0px;
+        padding: 40px 40px 80px 80px;
+        display: block;
+    }
+
+    .ana-box span {
+        justify-self: left;
+    }
+
+    .ana-box blockquote {
+        margin-bottom: 10px;
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .ana-text {
+        line-height: 1.3;
+    }
+
+}

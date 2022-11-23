@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ADALBERTO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-13 03:31:14 AM"/>
+        <attribute name="created" value="QURBTEJFUlRPO0xBUFRPUC1UTzlONEZLMzsyMDIyLTA5LTEzOzAzOjE2OjM0IEFNOzI5NzQ="/>
+        <attribute name="edited" value="QURBTEJFUlRPO0xBUFRPUC1UTzlONEZLMzsyMDIyLTA5LTEzOzAzOjMxOjE0IEFNOzE7MzA3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome, sobrenome, idade" type="String" array="False" size=""/>
+            <declare name="inteiro" type="String" array="False" size=""/>
+            <output expression="&quot;Qual &#233; o seu nome?:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Qual &#233; o seu sobrenome?:&quot;" newline="True"/>
+            <input variable="sobrenome"/>
+            <output expression="&quot;Qual &#233; a sua idade?:&quot;" newline="True"/>
+            <input variable="idade"/>
+            <output expression="&quot;O seu nome &#233; &quot; &amp; nome &amp; &quot; e o seu sobrenome &#233;: &quot; &amp; sobrenome &amp; &quot; a sua idade &#233;: &quot; &amp; idade" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.seguros h2 {
+    padding: 40px 0 30px;
+}
+
+article {
+    background: #111111;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    color: white;
+    padding: 0 20px;
+}
+
+.membership-box {
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.membership-box ul {
+    display: grid;
+    gap: 20px;
+    grid-column: 1/-1;
+}
+
+.price-membership {
+    text-align: right;
+}
+
+.mensal {
+    grid-column: 2;
+    text-align: right;
+}
+
+.membership-box a {
+    background: #303030;
+    color: white;
+    padding: 10px 20px;
+    display: inline;
+    justify-self: self-start;
+    margin-top: 17px;
+    border-radius: 4px;
+}
+
+.membership-advantages li {
+    position: relative;
+}
+
+.membership-advantages li:before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 10px;
+    background: url("https://www.origamid.com/projetos/bikcraft/img/icones/lista.svg") no-repeat;
+    position: absolute;
+    left: -18px;
+    top: 4px;
+}

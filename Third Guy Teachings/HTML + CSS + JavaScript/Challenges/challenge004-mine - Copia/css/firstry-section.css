@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+h2.choose-your-one { 
+    margin-top: 60px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.section-choices {
+    padding: 0 20px 20px;
+    overflow: auto;
+    margin-bottom: 60px;
+}
+
+.section-choices h2 {
+    margin-bottom: 10px;
+}
+
+.section-choices img {
+    min-width: 300px;
+}
+
+.choices {
+    display: flex;
+    gap: 20px;
+}
+
+.choices h3 {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+span.h3-detail {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    margin-right: 10px;
+    background: #ffbf00;
+}
+
+.choices a:hover span.h3-detail {
+    width: 20px;
+    transition: width 0.2s;
+}
+
+span.price-tag {
+    padding-left: 20px;
+}
+
+
+
+
+
+
+section.information {
+    color: white;
+    padding: 0 20px;
+}
+
+section.information h3 {
+    margin-bottom: 20px;
+}
+
+.information-part-1 h2 {
+    margin-bottom: 40px;
+}
+
+.information-part-1 p {
+    margin-bottom: 20px;
+}
+
+.information-part-1 a {
+    text-transform: uppercase;
+    border-bottom: 4px solid #ffbf00;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.information-part-1 {
+    padding: 60px 0;
+}
+
+.information-part-2 {
+    padding-bottom: 50px;
+}
+
+.information-part-2 img {
+    margin-bottom: 10px;
+    width: 25px;
+}
+
+.information-part-2 h4 {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.information-part-2 p.margin {
+    margin-bottom: 50px;
+}
