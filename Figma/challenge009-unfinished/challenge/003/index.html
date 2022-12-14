@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/4a225315bb.js" crossorigin="anonymous"></script>
+  <script src="main.js" defer></script>
+  
+  <title>FAQ Accordion Card | Wayne Tasaki</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Kumbh Sans;
+}
+
+body {
+  background: rgb(101,101,231);
+  background: linear-gradient(0deg, rgba(101,101,231,1) 0%, rgba(175,103,233,1) 100%) no-repeat center center fixed;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  background: url(images/bg-pattern-desktop.svg), white;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: -530px -265px;
+ 
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+
+  width: 920px;
+  height: 509px;
+  /* overflow: hidden; */
+  border-radius: 23px;
+  -webkit-box-shadow: 0px 32px 27px -8px rgba(59,59,135,0.81); 
+  box-shadow: 0px 32px 27px -8px rgba(59,59,135,0.81);
+  /* margin-top: 1.5rem; */
+}
+
+.hero-img-mobile {
+  display: none;
+}
+
+
+
+.img-section-center {
+  overflow-x: hidden;
+}
+
+.container-img {
+  display: block;
+  margin-top: 4.7rem;
+  margin-left: -4.5rem;
+}
+
+.container-img-2 {
+  display: block;
+  margin-left: -20.5%;
+  margin-top: -48%;
+}
+
+
+
+
+.accordion-wrapper {
+  width: 350px;
+  margin-left: 1rem;
+  margin-top: 4rem;
+  /* margin-bottom: 2rem; */
+}
+
+.accordion-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.accordion {
+  color: #4B4C5F;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+.accordion:hover {
+  color: #F47B56;
+}
+
+.arrow {
+  width: 12px;
+  height: 8px;
+  display: block;
+}
+.rotate{
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.up{
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.active  {
+  font-weight: 700;
+  color: #1E1F36;
+}
+
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-bottom: 1px solid #E8E8EA;;
+}
+
+.question {
+  font-size: 0.875;
+  line-height: 1.5;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+.answer {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #787887;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+/* ATTRIBUTION */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  color: white;
+  margin-top: 1.5rem;
+}
+.attribution a {
+   color: white;
+   text-decoration: none;
+}
+.attribution a:hover {
+  color: rgb(234, 209, 255);
+}
+
+/* MOBILE */
+@media (max-width: 1008px) {
+  .card {
+    width: 327px;
+    height: 535px;
+    background: url(images/bg-pattern-mobile.svg), white;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 39.5px -6px;
+  }
+  .img-section {
+    display: none;
+  }
+
+  .hero-img-mobile {
+    display: block;
+    position: absolute;
+    width: 237px;
+    margin-top: -6.75rem;
+    margin-left: 2.8rem;
+  }
+  
+  .accordion-title {
+    margin-top: 3.5rem;
+    text-align: center;
+  }
+
+  .accordion-wrapper {
+    margin: 24px;
+    margin-top: 4rem;
+    width: 279px;
+  }
+
+  .accordion {
+    font-weight: 300;
+  }
+
+  .question {
+    font-size: 0.813rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .answer {
+    font-size: 0.75rem;
+    font-weight: 200;
+  }
+  
+  .active {
+    font-weight: 600;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <main class="card">
+
+        <section class="img-section">
+          <section class="img-section-center">
+            <img class="container-img" src="images/illustration-woman-online-desktop.svg" alt="">
+          </section>
+          <img class="container-img-2" src="images/illustration-box-desktop.svg" alt="">
+        </section>
+
+      <img src="images/illustration-woman-online-mobile.svg" class="hero-img-mobile" alt="Illustration of a woman at a desktop computer">
+
+      <section class="accordion-wrapper">
+        <h1 class="accordion-title">FAQ</h1>
+        <div class="accordion">
+          <p class="question">How many team members can I invite?</p>
+          <img src="images/icon-arrow-down.svg" class="arrow rotate" alt="">
+        </div>
+          <div class="panel">
+            <p class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+          </div>
+        <div class="accordion">
+          <p class="question">What is the maximum file upload size?</p>
+          <img src="images/icon-arrow-down.svg" class="arrow rotate" alt="">
+        </div>
+          <div class="panel">
+            <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        <div class="accordion">
+          <p class="question">How do I reset my password?</p>
+          <img src="images/icon-arrow-down.svg" class="arrow rotate" alt="">
+        </div>
+          <div class="panel">
+            <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile page.<br><br>
+              A reset link will be emailed to you.</p>
+          </div>
+        <div class="accordion">
+          <p class="question">Can I cancel my subscription?</p>
+          <img src="images/icon-arrow-down.svg" class="arrow rotate" alt="">
+        </div>
+          <div class="panel">
+            <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        <div class="accordion">
+          <p class="question">Do you provide additional support?</p>
+          <img src="images/icon-arrow-down.svg" class="arrow rotate" alt="">
+        </div>
+          <div class="panel">
+            <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div> 
+          <script src="app.js"></script>
+        </main>
+        <footer class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/WayneTasaki" target="_blank">Wayne Tasaki <i class="fa-brands flip fa-github fa-lg"></i></a>
+        </footer>
+    </div>
+
+    <!--
+
+    // let acc = document.getElementsByClassName('accordion');
+  
+    // Array.from(acc).forEach(e => { e.addEventListener('click', activeAcc)})
+    
+    // function activeAcc() {
+    //   this.classList.toggle('active')
+    //   let panel = this.nextElementSibling;
+    //     if (panel.style.maxHeight) {
+    //       panel.style.maxHeight = null;
+    //     } else {
+    //       panel.style.maxHeight = panel.scrollHeight + "px";
+    //     }
+    //     let arrow = this.getElementsByTagName('img')[0]
+    //     arrow.classList.toggle('up')
+    // }
+    
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    // Open the first accordion
+    var firstAccordion = acc[0];
+    var firstPanel = firstAccordion.nextElementSibling;
+    // ** REMOVE COMMENT BELOW - for first accordion open by default ** //
+    // firstAccordion.classList.add("active");
+    // firstPanel.style.maxHeight = firstPanel.scrollHeight + "px";
+    
+    // Add onclick listener to every accordion element
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        // For toggling purposes detect if the clicked section is already "active"
+        var isActive = this.classList.contains("active");
+        // Rotate arrow icon
+        let arrow = this.getElementsByClassName('arrow')[0]
+        let upArrow = arrow.classList.contains('up')
+        // arrow.classList.add('up')
+    
+        // Close all accordions
+        var allAccordions = document.getElementsByClassName("accordion");
+        let allArrows = document.getElementsByClassName('arrow')
+        for (j = 0; j < allAccordions.length; j++) {
+          // Remove active class from section header
+          allAccordions[j].classList.remove("active");
+          allArrows[j].classList.remove('up');
+          
+          
+    
+          // Remove the max-height class from the panel to close it
+          var panel = allAccordions[j].nextElementSibling;
+          var maxHeightValue = getStyle(panel, "maxHeight");
+        
+        if (maxHeightValue !== "0px") {
+            panel.style.maxHeight = null;
+            
+          }
+          
+        }
+    
+        // Toggle the clicked section using a ternary operator
+        // isActive ? this.classList.remove("active") : this.classList.add("active");
+    
+        if (isActive == true) {
+          this.classList.remove('active')
+          arrow.classList.remove('up')
+        } else {
+          this.classList.add('active')
+          arrow.classList.add('up')
+        }
+    
+        // Toggle the panel element
+        var panel = this.nextElementSibling;
+        var maxHeightValue = getStyle(panel, "maxHeight");
+        
+        if (maxHeightValue !== "0px") {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      };
+    }
+    
+      // Cross-browser way to get the computed height of a certain element. Credit to @CMS on StackOverflow (http://stackoverflow.com/a/2531934/7926565)
+      function getStyle(el, styleProp) {
+        var value, defaultView = (el.ownerDocument || document).defaultView;
+        // W3C standard way:
+        if (defaultView && defaultView.getComputedStyle) {
+          // sanitize property name to css notation
+          // (hypen separated words eg. font-Size)
+          styleProp = styleProp.replace(/([A-Z])/g, "-$1").toLowerCase();
+          return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        } else if (el.currentStyle) { // IE
+          // sanitize property name to camelCase
+          styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
+            return letter.toUpperCase();
+          });
+          value = el.currentStyle[styleProp];
+          // convert other units to pixels on IE
+          if (/^\d+(em|pt|%|ex)?$/i.test(value)) { 
+            return (function(value) {
+              var oldLeft = el.style.left, oldRsLeft = el.runtimeStyle.left;
+              el.runtimeStyle.left = el.currentStyle.left;
+              el.style.left = value || 0;
+              value = el.style.pixelLeft + "px";
+              el.style.left = oldLeft;
+              el.runtimeStyle.left = oldRsLeft;
+              return value;
+            })(value);
+          }
+          return value;
+        }
+      }  
+    -->
+</div>
+</body>
+</html>

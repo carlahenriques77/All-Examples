@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <style>
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins';
+      color: white;
+      /* box-shadow: 0 0 0 2px red; */
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FF7979 url('images/bg-intro-mobile.png');
+      background-size: auto;
+      height: 100%;
+    }
+
+    main {
+      max-width: 327px;
+      margin: 0 24px;
+    }
+
+    .intro {
+      margin: 88px 0 0 0;
+    }
+
+    .sign {
+      margin: 0 0 88px 0;
+    }
+
+    .intro p {
+      margin: 16px 0 0 0;
+    }
+
+    .trial,
+    .intro,
+    .sign p  {
+      text-align: center;
+    }
+    
+    .trial,
+    .sign {
+      box-shadow: 0 10px 1px 0px rgba(0, 0, 0, 0.267);
+    }
+
+    .trial,
+    .sign,
+    input[type="submit"] {
+      border-radius: 8px;
+    }
+
+
+    .trial {
+      background: #5E54A4;
+      padding: 18px 66px;
+      margin: 64px 0 24px 0;
+    }
+
+    input::placeholder {
+      color: black;
+    }
+
+    input[type="submit"] {
+      color: white;
+      background: #38CC8B;
+      padding: 15px 44px;
+      margin: 0px 0px 8px 0px;
+      border: 0;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .sign p {
+      color: #A6A1CF;
+      font-size: 11px;
+      margin: 24px 0px 0px 0px;
+    }
+
+    strong {
+      cursor: pointer;
+    }
+
+    strong.red {
+      color: #FF7979;
+    }
+
+    @media(min-width: 800px) {
+      body {
+        height: 100vh;
+      }
+
+      main {
+        max-width: 100%;
+        gap: 45px;
+        margin: 0 24px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .right-side {
+        display: grid;
+        gap: 24px;
+      }
+
+      .intro {
+        display: grid;
+        place-content: center;
+        text-align: left;
+        margin: 0;
+      }
+
+      .trial {
+        padding: 12px;
+        margin: 0;
+      }
+      
+      br {
+        display: none;
+      }
+
+      input:not(input[type="submit"]) {
+        padding: 15px;
+      }
+
+      h1 {
+        max-width: 20ch;
+        font-size: 51px;
+      }
+
+      .sign {
+        margin: 0;
+      }
+
+      .error,
+      .success {
+        background-size: 30px !important;
+      }
+    }
+
+
+
+
+
+    input {
+      border: 1px solid rgba(0, 0, 0, 0.301);
+      outline: 0px solid;
+    }
+    
+    .success {
+      border: 1px solid lightgreen;
+      background: url('images/Eo_circle_green_checkmark.svg.png') no-repeat;
+      background-size: 25px;
+      background-position: 95% 50%;
+    }
+
+    .error {
+      border: 1px solid red;
+      background: url('images/icon-error.svg') no-repeat;
+      background-position: 95% 50%;
+      background-size: 25px;
+    }
+
+    .label-validation {
+      font-size: 10px;
+      color: red;
+    }
+
+    form div {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .label-success {
+      display: none;
+    }
+
+    .sign {
+      background: white;
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="intro">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+  
+    <div class="right-side">
+
+      <div class="trial">
+        <p><strong>Try it free 7 days</strong> then <br> $20/mo. thereafter</p>
+      </div>
+
+      <section class="sign">
+
+        <form action="" method="post" id="iform">
+
+          <div>
+            <input type="text" name="FirstName" id="iFirstName" placeholder="First Name">
+            <label></label>
+          </div>
+
+          <div>
+            <input type="text" name="lastname" id="iLastName" placeholder="Last Name">
+            <label></label>
+          </div>
+
+          <div>
+            <input type="email" name="email" id="iEmail" placeholder="Email Address">
+            <label></label>
+          </div>
+
+          <div>
+            <input type="password" name="password" id="iPassword" placeholder="Password">
+            <label></label>
+          </div>
+
+          <input type="submit" value="CLAIM YOUR FREE TRIAL">
+
+        </form>
+
+        <p>
+          By clicking the button, you are agreeing to
+          <br> 
+          our <strong class="red">Terms and Services</strong>
+        </p>
+
+      </section>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+  
+</body>
+</html>

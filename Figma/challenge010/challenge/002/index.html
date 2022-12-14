@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --darkblue: hsl(249, 10%, 26%);
+  --grayishblue: hsl(246, 25%, 77%);
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--red);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-image: url(https://alcs-signup-form.netlify.app/images/bg-intro-desktop.png);
+}
+body main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 7% 10%;
+}
+body main article {
+  width: 45%;
+}
+body main article h1 {
+  color: white;
+  font-size: 50px;
+}
+body main article p {
+  color: white;
+  line-height: 1.5;
+}
+body main .container .offer {
+  border: 0;
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: var(--blue);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 0px 0px;
+}
+body main .container .offer b {
+  font-weight: 600;
+}
+body main .container form {
+  margin-top: 15px;
+  max-width: 513px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 0px 0px;
+}
+body main .container form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+body main .container form div input {
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 500;
+  border: solid var(--grayishblue) 0.5px;
+}
+body main .container form div input:focus {
+  border: solid var(--blue) 0.5px;
+}
+body main .container form div .error {
+  border: solid var(--red) 2px;
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  font-weight: 500;
+  color: var(--red);
+}
+body main .container form div .error::-webkit-input-placeholder {
+  color: transparent;
+}
+body main .container form div .error:-moz-placeholder {
+  /* Firefox 18- */
+  color: transparent;
+}
+body main .container form div .error::-moz-placeholder {
+  /* Firefox 19+ */
+  color: transparent;
+}
+body main .container form div .error:-ms-input-placeholder {
+  color: transparent;
+}
+body main .container form div .success {
+  border: solid var(--grayishblue) 0.5px;
+  background-image: none;
+}
+body main .container form div .label-validation {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 10px;
+  text-align: end;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--red);
+}
+body main .container form div .label-success {
+  display: none;
+}
+body main .container form .submit {
+  width: 100%;
+  color: white;
+  outline: none;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: var(--green);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 0px 0px;
+  margin-bottom: 15px;
+}
+body main .container form p {
+  color: var(--grayishblue);
+  text-align: center;
+  font-size: 12px;
+}
+body main .container form p .terms {
+  font-weight: bold;
+  color: var(--red);
+}
+body footer {
+  width: 100%;
+}
+body footer .attribution {
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body footer .attribution p {
+  color: white;
+  font-size: 11px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+body footer .attribution a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--blue);
+}
+body footer .attribution i {
+  color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  body main {
+    margin: 7% 8%;
+  }
+  body main article h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 850px) {
+  body {
+    background-size: auto;
+    background-image: url(https://alcs-signup-form.netlify.app/images/bg-intro-mobile.png);
+  }
+  body main {
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 20%;
+  }
+  body main article {
+    width: 100%;
+    text-align: center;
+  }
+  body main article h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  body main article p {
+    margin-bottom: 50px;
+  }
+}
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>
+        Learn to code by watching others
+      </h1>
+  
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </article>
+  
+    <div class="container">
+  
+      <button class="offer"><b>Try it free 7 days</b> then $20/mo. thereafter</button>
+  
+      <form name="form" id="form" data-netlify="true" method="GET">
+        <div>
+          <input type="text" name="FirstName" id="FirstName" placeholder="First Name">
+          <label></label>
+        </div>
+  
+        <div>
+          <input type="text" name="LastName" id="LastName" placeholder="Last Name">
+          <label></label>
+          <!--<label class="label-validation">Last Name cannot be empty</label> pattern="^[a-zA-Z\s, ]+$"   -->
+        </div>
+  
+        <div>
+          <input type="email" id="email" name="EmailAddress" placeholder="Email Address">
+          <label></label>
+        
+        </div>
+  
+        <div>
+          <input type="password" name="Password" id="Password" placeholder="Password">
+          <label></label>
+          <!--<label class="label-validation">Password cannot be empty</label>-->
+        </div>
+        <div>
+  
+          <button class="submit" type="submit" id="submit">Claim your free trial</button>
+  
+          <p>By clicking the button, you are agreeing to our <a class="terms">Terms and Services</a></p>
+  
+        </div>
+  
+      </form>
+  
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      <p>
+        Coded by <a href="http://analuzcervantes.netlify.app/">Ana Luz Cervantes</a> with <i class="fas fa-heart"></i>.
+      </p>
+    </div>
+  
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
