@@ -69,6 +69,7 @@
       background: #5E54A4;
       padding: 18px 66px;
       margin: 64px 0 24px 0;
+      cursor: pointer;
     }
 
     input::placeholder {
@@ -91,12 +92,9 @@
       margin: 24px 0px 0px 0px;
     }
 
-    strong {
-      cursor: pointer;
-    }
-
     strong.red {
       color: #FF7979;
+      cursor: pointer;
     }
 
     @media(min-width: 800px) {
@@ -107,7 +105,7 @@
       main {
         max-width: 100%;
         gap: 45px;
-        margin: 0 24px;
+        margin: 0 34px;
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
@@ -150,6 +148,39 @@
       .success {
         background-size: 30px !important;
       }
+
+      form {
+        position: relative;
+      }
+
+      #label1,
+      #label2,
+      #label3,
+      #label4 {
+        position: absolute;
+        padding: 0 15px;
+      }
+
+      #label1 {
+        top: 52px;
+      }
+
+      #label2 {
+        top: 120px;
+      }
+
+      #label3 {   
+        top: 188px;
+      }
+
+      #label4 {
+        top: 256px;
+      }
+
+      form div:nth-child(4) {
+        margin: 0px 0px 10px 0px;
+      }
+
     }
 
 
@@ -230,22 +261,22 @@
 
           <div>
             <input type="text" name="FirstName" id="iFirstName" placeholder="First Name">
-            <label></label>
+            <label id="label1"></label>
           </div>
 
           <div>
             <input type="text" name="lastname" id="iLastName" placeholder="Last Name">
-            <label></label>
+            <label id="label2"></label>
           </div>
 
           <div>
             <input type="email" name="email" id="iEmail" placeholder="Email Address">
-            <label></label>
+            <label id="label3"></label>
           </div>
 
           <div>
             <input type="password" name="password" id="iPassword" placeholder="Password">
-            <label></label>
+            <label id="label4">></label>
           </div>
 
           <input type="submit" value="CLAIM YOUR FREE TRIAL">

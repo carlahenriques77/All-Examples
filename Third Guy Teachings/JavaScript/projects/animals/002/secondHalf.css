@@ -1,0 +1,63 @@
+
+.contact-section {
+    margin: 74px 0px 0px 0px;
+}
+
+.contact-section h1 {
+    margin: 0px 0px 26px 0px;
+}
+
+.contact-section ul {
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-section li {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica; /* Helped to Align it, somehow. Typography really makes a differnece... */
+}
+
+.contact-section li::before {
+    content: "";
+    width: 20px;
+    height: 10px;
+    background: #FB5;
+    margin-right: 10px;
+}
+
+
+[data-numbers="section-numbers"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 74px 0 0px 0;
+    gap: 30px;
+}
+
+[data-numbers="section-numbers"] h1 {
+    grid-column: span 2;
+    margin-bottom: 26px;
+}
+
+[data-numbers="section-numbers"] h3 {
+    font-family: 'Playfair Display SC';
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+[data-numbers="section-numbers"] span {
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #E54;
+}
+
+[data-numbers="section-numbers"] {
+    
+}
+
+[data-numbers="section-numbers"] {
+    
+}

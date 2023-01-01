@@ -1,0 +1,177 @@
+
+
+* {
+    box-shadow: 0 0 0 2px red;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'IBM PLex Mono';
+}
+
+:root {
+    #faf6ed
+    #222
+    #FB5
+    #E54
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    background: #faf6ed;
+}
+
+/* Header */
+
+header {
+    background:#FB5;
+
+    padding: 1px 0;
+}
+
+header ul {
+
+}
+
+/* First Animal Part */
+
+main {
+    display: grid;
+
+    padding: 0 10px;
+}
+
+h1 {
+    font-family: 'Playfair Display SC'; /* Dang, typing the Font makes an Difference... */
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+section.animals-section {
+    margin: 40px 0 0px 0;
+}
+
+section.animals-section h1 {
+    margin: 0px 0 26px 0;
+}
+
+main ul {
+ 
+}
+
+main .description {
+ 
+}
+
+section.animals-desc {
+    display: grid;
+    grid-template-columns: 100px 1fr;  
+    gap: 20px;
+}
+
+section.animals-desc ul {
+    overflow-y: scroll;
+    height: 370px;
+}
+
+section.animals-desc ul::-webkit-scrollbar {
+    width: 18px;
+}
+
+section.animals-desc ul::-webkit-scrollbar-track {
+    background: #faf6ed;
+}
+
+section.animals-desc ul::-webkit-scrollbar-thumb {
+    background: #FB5;
+    border-left: 4px solid #faf6ed;
+    border-right: 4px solid #faf6ed;
+} /* Write about it later */
+
+section.animals-desc li {
+    border: 10px solid black;
+}
+
+.description {
+    gap: 1rem;
+}
+
+.description h2 {
+    display: flex;
+    align-items: center;
+
+    color: #E54;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.description h2::before,
+[data-faq="question-toggle"] dt::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    background: #FB5;
+}
+
+.description h2::before {
+    width: 40px;
+    height: 10px;
+}
+
+.description p {
+    font-family: Helvetica;
+    line-height: 1.2;
+}
+
+/* Faq */
+
+.faq-section {
+    margin: 64px 0 0px 0;
+}
+
+.faq-section h1 {
+    margin: 0px 0 26px 0;
+}
+
+dl {
+    display: grid;
+    gap: 32px;
+}
+
+[data-faq="question-toggle"] dt::before  {
+    width: 20px;
+    height: 10px;
+}
+
+[data-faq="question-toggle"] dt {
+    display: flex;
+    align-items: center;
+
+    color: #E54;
+}
+
+[data-faq="question-toggle"] dt::after {
+    content: '';
+    display: inline-block;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(90deg);
+    background: url('https://www.origamid.com/projetos/animais-fantasticos/img/arrow-red.svg') no-repeat center center;
+    transition: .3s;
+}
+
+dd {
+    margin-top: 8px;
+    margin-left: 30px;
+}
+
+/*
+
+*/

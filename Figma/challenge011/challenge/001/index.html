@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      /* box-shadow: 0 0 0 2px red; */
+      color: white;
+      text-decoration: none;
+      font-family: 'Overpass';
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+    }
+
+    main {
+      max-width: 327px;
+      margin: 0 24px;
+      background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+      padding: 24px;
+    }
+
+    .star-div {
+      margin: 0px 0px 16px 0px;
+      position: relative;
+    }
+
+    .star-div img {
+      position: absolute;
+      top: 15px;
+      left: 16px;
+    }
+
+    .rating-start h1 {
+      margin: 0px 0px 10px 0px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .rating-start p,
+    .rating-wrapper,
+    .popup img,
+    .popup h2 {
+      margin: 0px 0px 24px 0px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .star-div,
+    label { 
+      width: 3rem;
+      height: 0;
+      padding-bottom: 3rem;
+      line-height: 3.2;
+      border-radius: 50%;
+    }
+
+    .rating-wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+
+    input[type="radio"] {
+      opacity: 0;
+      width: 0;
+      position: fixed; /* Weird. Didn't know that it made a difference here */
+    }
+
+    label {
+      cursor: pointer;
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      text-align: center;
+      width: 100%;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: 12px;
+      border: none;
+    }
+
+    input[type="submit"]:hover {
+      background: white;
+    }
+
+    .popup {
+      display: none;
+      text-align: center;
+    }
+
+    .popup img {
+      justify-self: center;
+    }
+
+    .popup h2 {
+      padding: 5px;
+      border-radius: 50px;
+      place-self: center;
+    }
+
+    .popup h1 {
+      margin: 0px 0px 10px 0px;
+    }
+
+    .popup h2,
+    span,
+    input[type="submit"]:hover {
+      color: #FC7614;
+    }
+
+    .star-div,
+    label {
+      color: #7C8798;
+    }
+
+    p {
+      color: #969FAD;
+    }
+
+    #iOne:checked ~ .rate-1,
+    #iTwo:checked ~ .rate-2,
+    #iThree:checked ~ .rate-3,
+    #iFour:checked ~ .rate-4,
+    #iFive:checked ~ .rate-5,
+    input[type="submit"] {
+      background: #FC7614;
+    }
+
+    .popup h2,
+    .star-div,
+    label {
+      background: #262E38;
+    }
+
+    label:hover {
+      background: #7C8798;
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <article>
+
+      <div class="rating-start">
+        <div class="star-div">
+          <img src="images/icon-star.svg" alt="">
+        </div>
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+        
+        <form action="" method="post">
+          <div class="rating-wrapper">
+            <input type="radio" name="Rating" id="iOne" value="1">
+            <label for="iOne" class="rating-ball rate-1">1</label>
+
+            <input type="radio" name="Rating" id="iTwo" value="2">
+            <label for="iTwo" class="rating-ball rate-2">2</label>
+
+            <input type="radio" name="Rating" id="iThree" value="3">
+            <label for="iThree" class="rating-ball rate-3">3</label>
+
+            <input type="radio" name="Rating" id="iFour" value="4">
+            <label for="iFour" class="rating-ball rate-4">4</label>
+
+            <input type="radio" name="Rating" id="iFive" value="5">
+            <label for="iFive" class="rating-ball rate-5">5</label>
+
+          </div>
+          
+          <input type="submit" value="Submit" class="submit-button">
+
+        </form>
+    
+      </div>
+    
+      <!-- Rating state end -->
+    
+      <!-- Thank you state start -->
+      <div class="popup">
+        <img src="images/illustration-thank-you.svg" alt="">
+        <h2>You selected <span class="userRating"></span> out of 5</h2>
+      
+        <h1>Thank you!</h1>
+      
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+      
+        <!-- Thank you state end -->
+
+      </div>
+
+    </article>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            font-family: 'Chivo';
+            /* box-shadow: 0 0 0 2px red; */
+        }
+
+        :root {
+            color: #54E6AF;
+            color: #2C344B;
+            color: #121725;
+            color: #5A668A;
+            color: #C2CBE5;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        body {
+            height: 100vh;
+            background: #121725 url('images/desktop/image-host.jpg') no-repeat;
+            background-position: center top; /* Yes, finally a good result */
+            background-attachment: fixed;
+            background-blend-mode: multiply;
+        }
+
+        .container {
+            padding: 62px 20px;
+            overflow: hidden;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header img {
+            margin: 0px 0px 57px 0px;
+        }
+
+        h1 {
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 0px 0px 16px 0px;
+            text-align: center;
+        }
+
+        h1 span {
+            color: #54E6AF;
+        }
+
+        p {
+            color: #C2CBE5;
+            font-size: 15px;
+            line-height: 25px;
+            margin: 0px 0px 33px 0px;
+            text-align: center;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 0px 48px 0px;
+        }
+
+        .socials img {
+            cursor: pointer;
+        }
+
+        .socials img:nth-child(1) {
+            width: 17%;
+        }
+
+        .socials img:nth-child(2) {
+            width: 14%;
+        }
+
+        .socials img:nth-child(3) {
+            width: 22%;
+        }
+
+        .socials img:nth-child(4) {
+            width: 23%;
+        }
+
+        input {
+            border-radius: 20px;
+            width: 100%;
+            padding: 12px 32px;
+        }
+
+        form div {
+            margin: 0px 0px 16px 0px;
+        }
+
+        input[type="text"] {
+            background: #2C344B;
+            color: white;
+        }
+
+        label {
+            color: #FB3E3E;
+            font-size: 12px;
+            text-align: left;
+            padding: 0px 32px;
+        }
+
+        input[type="submit"] {
+            background: #54E6AF;
+            color: black;
+        }
+
+        footer {
+            display: none;
+        }
+
+        @media (min-width: 800px) {
+            body {
+                background: #121725 url('images/tablet/image-host.jpg') no-repeat;
+                background-blend-mode: normal;
+                background-position: right top;
+            }
+
+            .container {
+                margin: auto 39px;
+                padding: 62px 20px 0px 0px;
+            }
+
+            header  {
+                text-align: left;
+            }
+
+            main {
+                background-color: #121725;
+                padding: 92px 0px 0px 0px;
+                display: grid;
+            }
+
+            h1,
+            p {
+                text-align: left;
+            }
+
+            .socials {
+                margin: 78px 0px 0px 0px;
+                grid-row: 3;
+            }
+
+            form {
+                position: relative;
+            }
+
+            input {
+                width: 427px;
+            }
+
+            input[type="text"] {
+                padding: 12px 249px 12px 32px
+            }
+
+            label {
+                display: block;
+            }
+
+            input[type="submit"] {
+                position: absolute;
+                width: 200px;
+                padding: 8px 0;
+                top: 4px;
+                right: 58px;
+            }
+
+            footer {
+                display: block;
+                padding: 152px 0px 0px 39px;
+                background: #121725;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            html {
+                margin: 102px 0 0px 162px;
+            }
+
+            body {
+                background: #121725 url('images/desktop/image-host.jpg') no-repeat;       
+                background-position: left 346px top 0;
+            }
+
+            .container {
+                padding: 0;
+                max-width: 653px;
+            }
+
+            h1 {
+                font-size: 52px;
+                line-height: 62px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28px;
+                max-width: 40ch;
+            }
+
+            .socials {
+                gap: 25px;
+                justify-content: initial;
+            }
+
+            .socials img:nth-child(1) {
+                width: 13%;
+            }
+
+            .socials img:nth-child(2) {
+                width: 10%;
+            }
+
+            .socials img:nth-child(3) {
+                width: 18%;
+            }
+
+            .socials img:nth-child(4) {
+                width: 19%;
+            }
+
+            input[type="text"] {
+                padding: 14px 32px;
+            }
+
+            label {
+                margin: 5px 0px 0px 0px;
+            }
+            
+            input[type="submit"] {
+                padding: 9px 29px;
+                right: 230px;
+            }
+
+            footer {
+                position: relative;
+            }
+
+            footer img {
+                position: absolute;
+                right: 0px;
+                bottom: 100px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <img src="images/desktop/logo.svg" alt="">
+
+        </header>
+
+        <main>
+
+            <div class="intro">
+
+                <h1><span>Publish your podcasts</span> everywhere.</h1>
+
+                <p>Upload your audio to Pod with a single click. We'll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+
+            </div>
+
+            <div class="socials">
+
+                <img src="images/desktop/spotify.svg" alt="">
+
+                <img src="images/desktop/apple-podcast.svg" alt="">
+
+                <img src="images/desktop/google-podcasts.svg" alt="">
+
+                <img src="images/desktop/pocket-casts.svg" alt="">
+
+            </div>
+
+            <form action="">
+
+                <div>
+                    <input type="text" name="Mail" id="iMail" placeholder="Email address">
+                    <label for="iMail"></label>
+                </div>
+
+                <input type="submit" value="Request Access">
+
+            </form>
+
+        </main>
+
+
+
+    </div>
+
+    <script src="app.js"></script>
+
+    <footer>
+
+        <img src="images/desktop/bg-pattern-dots.svg" alt="">
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      /* box-shadow: 0 0 0 2px red; */
+      font-family: 'Kumbh Sans';
+      font-size: 12px;
+    }
+
+    body {
+      margin: 0px 0;
+      height: 100vh;
+      display: grid;
+      background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%) no-repeat;
+      background-attachment: fixed;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      background: white;
+      width: 327px;
+      padding: 106px 20px 20px 20px;
+      position: relative;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    img {
+      width: 250px
+    }
+
+    .mobile-img {
+      margin-bottom: -104px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .img-wrapper {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    img:nth-child(2) {
+      margin-top: -80px;
+    }
+
+    img:nth-child(3) {
+      display: none;
+    }
+
+    img:nth-child(4) {
+      display: none;
+    }
+
+    img:nth-child(5) {
+      display: none;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin: 0 0 20px 0;
+    }
+
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .qabox {
+      border-bottom: 1px solid gray;
+      margin-bottom: 13px;
+    }
+
+    .qabox:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 13px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: normal;
+      gap: 35px;
+    }
+
+    .active h2 {
+      font-weight: bold;
+    }
+
+    .active span img {
+      transform: rotate(180deg);
+    }
+
+    .answer {
+      display: none;
+      padding-bottom: 10px;
+    }
+
+    .active .answer {
+      display: block;
+    }
+
+    span img {
+      width: 10px;
+    }
+
+    .invisible {
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+
+      .mobile-img {
+        display: none;
+      }
+
+      * {
+        text-align: left !important;
+      }
+
+      main {
+        width: 750px;
+        height: 440px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 20px 20px 20px;
+      }
+
+      .img-wrapper {
+        margin: 0 0 0px -200px;
+        display: flex;
+      }
+
+      .img-wrapper img {
+        width: 400px;
+      }
+
+      .img-wrapper img:nth-child(1) {
+        display: none;
+      }
+
+      .img-wrapper img:nth-child(2) {
+        position: absolute;
+      display: block;  
+    top: 323px;
+      }
+
+      .img-wrapper img:nth-child(3) {
+        display: block;
+        position: relative;
+     }
+
+     .img-wrapper img:nth-child(4) {
+      position: absolute;
+      display: block;
+      top: 195px;
+    left: -84px;
+    width: 146px;
+    }
+
+    .img-wrapper img:nth-child(5) {
+      position: absolute;
+      display: block;
+      top: -74px;
+    left: -214px;
+    width: 467px;
+    }
+
+      h1 {
+        margin-bottom: 45px;
+      }
+
+      .faq {
+        padding: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="mobile-img">
+    <img src="images/illustration-woman-online-mobile.svg" alt="">
+    <img src="images/bg-pattern-mobile.svg" alt="">
+  </div>
+
+  <main>
+
+    <div class="img-wrapper">
+
+      <img src="images/illustration-woman-online-mobile.svg" alt="">
+      <img src="images/bg-pattern-mobile.svg" alt="">
+      <img src="images/illustration-woman-online-desktop.svg" alt="">
+      <img src="images/illustration-box-desktop.svg" alt="">
+      <img src="images/bg-pattern-desktop.svg" alt="">
+  
+    </div>
+
+    <article class="faq">
+
+      <h1>FAQ</h1>
+
+      <div class="qabox">
+        <div class="question">
+          <h2>How many team members can I invite? <span><img src="images/icon-arrow-down.svg" alt=""></span></h2>
+        </div>
+
+        <div class="answer">
+          <p>
+            You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.
+          </p>
+        </div>
+
+      </div>
+    
+      <div class="qabox">
+        <div class="question">
+          <h2>  What is the maximum file upload size?<span><img src="images/icon-arrow-down.svg" alt=""></span></h2>
+        </div>
+
+        <div class="answer">
+          <p>
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </p>
+        </div>
+      </div>
+    
+      <div class="qabox">
+        <div class="question">
+          <h2>  How do I reset my password?<span><img src="images/icon-arrow-down.svg" alt=""></span></h2>
+        </div>
+
+        <div class="answer">
+          <p>
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+          </p>
+        </div>
+      </div>
+    
+      <div class="qabox">
+        <div class="question">
+          <h2>Can I cancel my subscription?<span><img src="images/icon-arrow-down.svg" alt=""></span></h2>
+        </div>
+
+        <div class="answer">
+          <p>
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </p>
+        </div>
+      </div>
+
+      <div class="qabox">
+        <div class="question">
+          <h2>Do you provide additional support?<span><img src="images/icon-arrow-down.svg" alt=""></span></h2>
+        </div>
+
+        <div class="answer">
+          <p>
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </p>
+        </div>
+      </div>
+
+    </article>
+
+  </main>  
+
+  <script src="app.js"></script>
+
+</body>
+</html>

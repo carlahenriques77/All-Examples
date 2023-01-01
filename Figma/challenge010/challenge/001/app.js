@@ -34,7 +34,6 @@ function FirstName() {
             Error(constFirstName, 'Looks like this is not an First Name');
         }
     }
-    return fn
 }
 
 function LastName() {
@@ -118,13 +117,14 @@ constPassword.addEventListener('blur', function(){
 
 
 
-
 const testFirstName = iFirstName => nameFormat.test(iFirstName)
 const testLastName = iLastName => nameFormat.test(iLastName)
 const testEmail = iEmail => validateEmail.test(iEmail)
 const testPassword = iPassword => passFormat.test(iPassword)
 
 constFirstName.addEventListener('keyup', event => {
+    FirstName()
+
     const validName = testFirstName(event.target.value)
     if (validName) {
         constFirstName.setAttribute('class', 'success')
@@ -134,6 +134,8 @@ constFirstName.addEventListener('keyup', event => {
 })
 
 constLastName.addEventListener('keyup', event => {
+    LastName()
+
     const validName = testLastName(event.target.value)
     if (validName) {
         constLastName.setAttribute('class', 'success')
@@ -143,6 +145,7 @@ constLastName.addEventListener('keyup', event => {
 })
 
 constEmail.addEventListener('keyup', event => {
+
     const validEmail = validateEmail(event.target.value)
     if (validEmail) {
         constEmail.setAttribute('class', 'success')
@@ -152,6 +155,8 @@ constEmail.addEventListener('keyup', event => {
 })
 
 constPassword.addEventListener('keyup', event => {
+    Password()
+
     const validPass = testPassword(event.target.value)
     if (validPass) {
         constPassword.setAttribute('class', 'success')
