@@ -165,7 +165,7 @@ main {
 }
 
 .language-switch {
-    animation: show-switch 10s;
+    animation: show-switch 3s;
 }
 
 @keyframes show-switch {

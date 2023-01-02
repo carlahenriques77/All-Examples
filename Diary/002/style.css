@@ -107,12 +107,35 @@ p {
 .label1 {
     display: flex;
     align-items: center;
-    background: rgb(179, 25, 66)
+    background: rgb(179, 25, 66);
+    box-shadow: 6px 3px 11px rgb(0 0 0 / 25%);
+    width: 80px;
 }
 
 .label2 {
     align-items: center;
     background: rgb(170, 21, 27);
+    box-shadow: 2px 2px 2px black;
+    box-shadow: 6px 3px 11px rgb(0 0 0 / 25%);
+    width: 80px;
+}
+
+.label1:hover {
+    background: rgb(185, 46, 83);
+    font-weight: 700;
+}
+
+.label2:hover {
+    background: rgb(194, 77, 80);
+    font-weight: 700;
+}
+
+.label1:active {
+    background: rgb(148, 20, 54);
+}
+
+.label2:active {
+    background: rgb(145, 18, 23);
 }
 
 .language-switch img {
