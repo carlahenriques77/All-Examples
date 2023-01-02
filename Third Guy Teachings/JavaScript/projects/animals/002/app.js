@@ -355,6 +355,40 @@ function functionIntiateOpenHours() {
 functionIntiateOpenHours() 
 
 
+function functionIntiateAboutDropdown() {
+
+  const constDropDownAbout = document.querySelectorAll('[data-menu="dropdown-about-li"]')
+
+  constDropDownAbout.forEach(elementAboutMenu => {
+    
+    ['touchstart', 'click']. forEach(stringUserEvent => {
+
+      elementAboutMenu.addEventListener(stringUserEvent, functionHandleClick)
+
+    })
+
+  })
+
+  function functionHandleClick(anyEventHandleClick) {
+
+    anyEventHandleClick.preventDefault()
+
+    this.classList.add('about-dropdown-active')
+
+    functionOutsideCLick(this, ['touchstart', 'click'], () => {
+
+      this.classList.remove('about-dropdown-active')
+
+    })
+
+  }
+
+}
+
+functionIntiateAboutDropdown()
+
+
+
 
 /*
   

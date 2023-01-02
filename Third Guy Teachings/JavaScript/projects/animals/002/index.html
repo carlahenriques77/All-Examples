@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display+SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
 
     <link rel="stylesheet" href="firstHalf.css" />
@@ -19,9 +25,9 @@
           <button data-menu="button">Menu</button>
           <ul data-menu="header-ul">
             <li><a href="#animals">Animais</a></li>
-            <li>
+            <li data-menu="dropdown-about-li">
               <a href="">Sobre</a>
-              <ul data-menu="about">
+              <ul data-menu="about-more">
                 <li><a href="">Equipe</a></li>
                 <li><a href="">Sócios</a></li>
                 <li><a href="">Investidores</a></li>
@@ -34,7 +40,11 @@
         </nav>
       </header>
       <main>
-        <section class="animals-section" id="animals" data-scroll="animation-scroll">
+        <section
+          class="animals-section"
+          id="animals"
+          data-scroll="animation-scroll"
+        >
           <h1>Animais Fantásticos</h1>
           <section class="animals-desc">
             <ul data-tab="animal-choices">
@@ -168,7 +178,6 @@
         </section>
 
         <section data-numbers="section-numbers" data-scroll="animation-scroll">
-          
           <h1>Números</h1>
 
           <div class="animal-number-class">
@@ -190,32 +199,30 @@
             <h3>Ursos</h3>
             <span data-number="animal-number-span">230</span>
           </div>
-
         </section>
 
         <section class="contact-section" data-scroll="animation-scroll">
           <h1>Contato</h1>
-          <div data-map="address" aria-label="Edereço próximo ao estacionamento.">
-            <img src="images/mapa.png" alt=""/>
+          <div
+            data-map="address"
+            aria-label="Edereço próximo ao estacionamento."
+          >
+            <img src="images/mapa.png" alt="" />
           </div>
-  
+
           <ul>
             <li>contato@origamid.com</li>
             <li>+55 (21) 9999-9999</li>
             <li>Rua do Conde, nº 21</li>
             <li>Rio de Janeiro - RJ</li>
             <li>Doe 0.0114 bitcoin para nos ajudar</li>
-            <li data-dataopenweekdays="1,2,3,4,5" data-dataopenhours="8,18">Seg à Sex das 8 às 18</li>
+            <li data-dataopenweekdays="1,2,3,4,5" data-dataopenhours="8,18">
+              Seg à Sex das 8 às 18
+            </li>
           </ul>
         </section>
-
       </main>
-
-      
-
-
-
-  </div>
+    </div>
 
     <div class="login-screen">
       <div class="login-container">

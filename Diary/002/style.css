@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-weight: normal;
+}
+
+body {
+    line-height: 1.4em;
+    font-family: 'Verdana';
+    height: 100%;
+    background: black;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    background: #F04226;
+    margin-bottom: 30px;
+    padding: 5px 20px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header button {
+    border: none;
+    background: #F04226;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+}
+
+.main-margin {
+    margin: 0 10px
+}
+
+main {
+    background: white;
+    max-width: 850px;
+    min-height: 470px;
+    padding: 33px 36px;
+    color: #4b525b;
+    margin: auto;
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-top: 1px solid #8e8e93;
+    border-bottom: 1px solid #8e8e93;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: rgb(75, 82, 91);
+    font-size: 1rem;
+    font-family: "Open Sans";
+}
+
+h2 span {
+    margin-right: 10px;
+}
+
+p {
+    margin-top: 20px;
+    line-height: 1.5em;
+    font-size: 17px;
+}
+
+.language-switch {
+    display: flex;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+}
+
+.language-switch label {
+    color: white;
+    padding: 12px 16px;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.label1 {
+    display: flex;
+    align-items: center;
+    background: rgb(179, 25, 66)
+}
+
+.label2 {
+    align-items: center;
+    background: rgb(170, 21, 27);
+}
+
+.language-switch img {
+    width: 14px;
+    margin-right: 4px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.content div:nth-child(2) {
+    width: 335px;
+    transform: rotate(-1deg);
+    margin: 16px auto;
+    box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+    ;
+}
+
+img {
+    box-shadow: 0 0 6px rgb(0 0 0 / 25%);;
+}
+
+.image2 {
+    width: 300px;
+    margin: 16px auto;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.image2 .image-language {
+    transform: rotate(-3deg);
+}
+
+.image2 .image-menu {
+    transform: rotate(1deg);
+}
+
+.errors-image {
+    width: 200px;
+    margin: 16px auto;
+    rotate: 2deg;
+}
+
+.his-message {
+    transform: rotate(1deg);
+    width: 250px;
+    margin: 16px auto;
+}
+
+.leash-image {
+    transform: rotate(-4deg);
+    width: 188px;
+    margin: 16px auto;
+}
+
+.breasts-images {
+    margin: 16px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.breasts-images img {
+    width: 155px;
+}
+
+.heart1 {
+    top: 20px;
+    left: -87px;
+    rotate: -27deg;
+}
+
+.heart2 {
+    top: -11px;
+    right: -76px;
+    rotate: 34deg;
+}
+
+.hearts {
+    width: 52px;
+    box-shadow: none;
+    position: absolute;
+}
