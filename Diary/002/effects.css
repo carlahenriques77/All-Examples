@@ -82,7 +82,7 @@ main {
     background: #FB5;
     border: 2px solid #333;
     z-index: 1000;
-    width: 111px;
+    width: 130px;
 }
 
 [data-menu="about-more"]::before {

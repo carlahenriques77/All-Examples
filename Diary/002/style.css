@@ -191,3 +191,23 @@ img {
     box-shadow: none;
     position: absolute;
 }
+
+.what-i-meant {
+    margin: 16px auto;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.what-i-meant img {
+    width: 165px;
+}
+
+.lap1 {
+    rotate: -3deg;
+    margin-top: 6px;
+}
+
+.lap2 {
+    rotate: 2deg;
+}
