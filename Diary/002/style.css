@@ -224,6 +224,7 @@ img {
     display: flex;
     justify-content: center;
     gap: 35px;
+    position: relative;
 }
 
 .what-i-meant img {
@@ -237,4 +238,23 @@ img {
 
 .lap2 {
     rotate: 2deg;
+}
+
+.lap-heart1,
+.lap-heart2 {
+    width: 90px !important;
+    position: absolute;
+    box-shadow: none;
+}
+
+.lap-heart1 {
+    top: -3px;
+    left: 80px;
+    rotate: -6deg;
+}
+
+.lap-heart2 {
+    bottom: 43px;
+    right: 96px;
+    rotate: 13deg;
 }
