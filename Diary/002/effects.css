@@ -109,6 +109,9 @@ main {
     top: 102px;
 }
 
+[data-tab="description"] {
+    margin-top: 90px;
+}
 
 [data-tab="description"] section {
     display: none;
@@ -175,3 +178,11 @@ main {
         transform: translate(0, 0, 0);
     }
 } /* Write about it later */
+
+.black-shadow {
+    box-shadow: inset 500px 500px black;
+    width: 100%;
+    height: 43px;
+    position: absolute;
+    left: 0px;
+}

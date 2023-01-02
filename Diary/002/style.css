@@ -29,6 +29,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 5000;
 }
 
 header button {
@@ -86,9 +89,10 @@ p {
 
 .language-switch {
     display: flex;
-    position: absolute;
     top: 1px;
     right: 10px;
+    position: fixed;
+    z-index: 6000;
 }
 
 .language-switch label {
