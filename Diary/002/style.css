@@ -185,10 +185,54 @@ img {
     margin: 16px auto;
 }
 
-.leash-image {
-    transform: rotate(-4deg);
-    width: 188px;
+.dog-items-image {
     margin: 16px auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.leash {
+    width: 188px;
+    transform: rotate(-4deg);
+}
+
+.bowl {
+    transform: rotate(-4deg);
+    box-shadow: none;
+    width: 148px;
+    top: 142px;
+    opacity: 93%;
+    position: absolute;
+}
+
+.paw1,
+.paw2 {
+    box-shadow: none;
+    position: absolute;
+    width: 58px;
+}
+
+.paw1:hover,
+.paw2:hover {
+    transition: 0.3s;
+    transform: translate(0px, -8px);
+}
+
+.paw1 {
+    right: 128px;
+    rotate: 7deg;
+    top: 66px;
+}
+
+.paw2 {
+    left: 130px;
+    rotate: -18deg;
+    bottom: 24px;
+}
+
+.dog-p-margin {
+    margin-top: 30px;
 }
 
 .breasts-images {

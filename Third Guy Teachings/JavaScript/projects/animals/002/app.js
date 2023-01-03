@@ -388,6 +388,25 @@ function functionIntiateAboutDropdown() {
 functionIntiateAboutDropdown()
 
 
+function functionIntiateBitcoin() {
+
+fetch("https://blockchain.info/ticker")
+
+.then(responseBitcoin => responseBitcoin.json())
+
+.then(anyBitcoin => {
+
+  const constBitcoinPrice = document.querySelector('[data-bitcoin="bitcoin-price"]')
+
+  constBitcoinPrice.innerText = (20 / anyBitcoin.BRL.sell).toFixed(4)
+
+})
+
+}
+
+functionIntiateBitcoin()
+
+
 
 
 /*

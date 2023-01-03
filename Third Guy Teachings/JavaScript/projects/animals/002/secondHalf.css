@@ -61,3 +61,12 @@
 [data-numbers="section-numbers"] {
     
 }
+
+[data-bitcoin="bitcoin-price"] {
+    background: #3F4;
+    padding: 0.2rem 0.5rem;
+    font-weight: 700;
+    border-radius: 2px;
+    margin: 0 10px;
+    font-family: Helvetica;
+}
