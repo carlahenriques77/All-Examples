@@ -242,6 +242,25 @@ img {
     bottom: 24px;
 }
 
+.tape {
+    box-shadow: none;
+    position: absolute;
+    width: 81px;
+    top: 203px;
+    height: 36px;
+}
+
+.my-name {
+    position: absolute;
+    top: 220px;
+    letter-spacing: 1px;
+    font-family: 'Moon Dance';
+    font-size: 34px;
+    transform: rotate(-4deg);
+    margin: 0;
+    line-height: 0;
+}
+
 .dog-p-margin {
     margin-top: 30px;
 }
