@@ -1,0 +1,276 @@
+
+/* JavaScript */
+
+[data-menu="button"] {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    z-index: 300;
+    margin: 10px;
+
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+[data-menu="button"]::before {
+    content: '';
+    display: inline-block;
+    margin-right: 4px;
+    height: 2px;
+    width: 12px;
+    background: white;
+    box-shadow: 0 4px white, 0 -4px white;
+    transition: transform 0.3s;
+}
+
+[data-menu="button"].dropdown-menu-active::before  {
+    transform: rotate(90deg);
+}
+
+[data-menu="header-ul"] {
+    display: none;
+    position: absolute;
+    background: #FB5;
+    width: 160px;
+    z-index: 200;
+    top: 0;
+    padding: 60px 0px 20px 0px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+[data-menu="header-ul"].dropdown-menu-active {
+    display: block;
+    animation: show 0.3s;
+}
+
+[data-menu="header-ul"] a {
+    display: block;
+    padding: 10px;
+    margin-right: 10px;
+    color: #222;
+    font-weight: 700;
+    font-size: 0.875rem; /* Odd... The Font Size changed how Bold the text was. These CSS things sure are pretty weird */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+
+[data-menu="about-more"] {
+    display: none;
+}
+
+[data-menu="dropdown-about-li"].about-dropdown-active [data-menu="about-more"],
+[data-menu="dropdown-about-li"]:hover [data-menu="about-more"] {
+    display: block;
+    position: static;
+    animation: show-up-dropdown-about 0.3s forwards;
+} /* Apparently, you need an Space when addresing the Elements in this way... */
+
+@keyframes show-up-dropdown-about {
+    from {
+      opacity: 0;
+      transform: translate3d(0,30px,0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+[data-menu="about-more"] {
+    position: absolute;
+    top: 38px;
+    background: #E54;
+    border: 2px solid #333;
+    z-index: 200;
+}
+
+[data-menu="about-more"]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #E54;
+}
+
+
+[data-scroll="animation-scroll"] {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: .3s;
+}
+
+.scroll-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+[data-tab="description"] section {
+    display: none;
+}
+
+.active {
+    display: grid !important;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    } 
+    to {
+        opacity: 1;
+        transform: translate(0, 0, 0);
+    }
+} /* Write about it later */
+
+.animals-desc section {
+    animation: show .5s forwards; /* Write about it later */
+}
+
+.active-question dt::after {
+    transform: rotate(-90deg);
+}
+
+
+.questions-and-answers dd {
+    display: none;
+}
+
+.active-question dd {
+    display: block;
+}
+
+@keyframes ddAnimation {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        max-height: 200px;
+        opacity: 1;
+    }
+}
+
+dd {
+    animation: ddAnimation .5s forwards;
+}
+
+/* Contact */
+.map-hover {
+    position: absolute;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 0 2px #f85, 0 0 0 6px rgba(0, 0, 0, 0.6);
+    padding: 0.5rem;
+    color: white;
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    font-size: 0.875rem;
+    max-width: 170px;
+    border-radius: 2px;
+    top: 0px;
+    left: 0px;
+}
+
+[data-dataopenweekdays="1,2,3,4,5"]::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #E54;
+    border-radius: 50px;
+    margin-left: 4px;
+    border: 2px solid black;
+}
+
+[data-dataopenweekdays="1,2,3,4,5"].open-time::after {
+    background: #3F4;
+}
+
+/* Popup */
+
+.login-screen {
+    background: rgba(0, 0, 0, 0.5);
+
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2000;
+}
+
+.login-container {
+    background: white;
+    width: 80vw;
+    max-width: 600px;
+    padding: 40px;
+    border: 10px solid #f85;
+    box-shadow: 0 0 0 10px white;
+    position: relative;
+}
+
+.login-close {
+    top: -30px;
+    right: -30px;
+    position: absolute;
+    background: #e54 url('https://www.origamid.com/projetos/animais-fantasticos/img/fechar.svg') no-repeat center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.login-screen label {
+    color: black;
+    font-weight: 700;
+}
+
+.login-screen input:not(input[type='submit']) {
+    margin: 8px 0px 16px 0px;
+    width: 100%;
+    outline: none;
+    border: 2px solid black;
+    padding: 12px;
+}
+
+input[type="submit"] {
+    padding: 12px 16px;
+    color: white;
+    background: #e54;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.login-active {
+    display: flex;
+}
+
+
+
+/*
+
+ 
+
+/*
