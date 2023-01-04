@@ -148,7 +148,7 @@ main {
     display: none;
 }
 
-.check:checked ~ .content.contentHindi {
+.check:checked ~ .content.contentSpanish {
     display: block;
 }
 

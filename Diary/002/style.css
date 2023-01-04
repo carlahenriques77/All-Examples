@@ -63,18 +63,22 @@ main {
 h1 {
     font-size: 2rem;
     line-height: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.date {
+    border-top: 1px solid #8e8e93;
+    border-bottom: 1px solid #8e8e93;
+    font-size: 0.8rem;
+    color: rgb(75, 82, 91);
+    font-size: 0.8rem;
+    font-family: "Open Sans";
 }
 
 h2 {
-    border-top: 1px solid #8e8e93;
-    border-bottom: 1px solid #8e8e93;
     display: flex;
     align-items: center;
-    padding: 10px;
-    color: rgb(75, 82, 91);
-    font-size: 1rem;
-    font-family: "Open Sans";
 }
 
 h2 span {
@@ -145,7 +149,15 @@ p {
     border-radius: 50%;
 }
 
-.content div:nth-child(2) {
+.time {
+    font-weight: 400;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.last-diary {
     width: 335px;
     transform: rotate(-1deg);
     margin: 16px auto;
