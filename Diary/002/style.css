@@ -201,6 +201,7 @@ img {
     display: flex;
     position: relative;
     justify-content: center;
+    width: 250px; /* Apparently, for the Paw's and Add Ons to follow it right, the Container MUST have a Set Width to it... */
 }
 
 .leash {
@@ -231,13 +232,13 @@ img {
 }
 
 .paw1 {
-    right: 128px;
+    right: 288px;
     rotate: 7deg;
     top: 66px;
 }
 
 .paw2 {
-    left: 130px;
+    left: 288px;
     rotate: -18deg;
     bottom: 24px;
 }
@@ -265,14 +266,47 @@ img {
     margin-top: 30px;
 }
 
-.breasts-images {
+.breasts-container {
+    position: relative;
+    width: 200px;
     margin: 16px auto;
     display: flex;
     justify-content: center;
 }
 
+.breasts-images {
+    display: flex;
+    position: relative;
+    overflow-x: scroll;
+    border: 4px solid black;
+}
+
 .breasts-images img {
     width: 155px;
+}
+
+.arrow1 {
+    position: absolute;
+    left: -131px;
+    top: -45px;
+    width: 123px !important;
+    box-shadow: none;
+    rotate: -20deg;
+    transform: scaleY(-1);
+}
+
+.breasts-p {
+    position: absolute;
+    left: -257px;
+    top: 35px;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .breasts-p {
+        width: 13ch;
+        left: -122px;
+    }
 }
 
 .heart1 {
@@ -293,12 +327,40 @@ img {
     position: absolute;
 }
 
-.what-i-meant {
+.what-i-meant-container {
+    position: relative;
     margin: 16px auto;
     display: flex;
     justify-content: center;
+    width: 250px;
+}
+
+.what-i-meant {
     gap: 35px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .what-i-meant {
+        gap: 0;
+        overflow-x: scroll;
+        border: 4px solid black;
+        z-index: 1;
+    }
+
+    .lap1,
+    .lap2 {
+        rotate: 0deg !important;
+    }
+
+    .lap-heart1 {
+        left: 245px !important;
+    }
+
+    .lap-heart2 {
+        right: 245px !important;
+    }
 }
 
 .what-i-meant img {
@@ -323,12 +385,12 @@ img {
 
 .lap-heart1 {
     top: -3px;
-    left: 80px;
+    left: 341px;
     rotate: -6deg;
 }
 
 .lap-heart2 {
     bottom: 43px;
-    right: 96px;
+    right: 341px;
     rotate: 13deg;
 }
