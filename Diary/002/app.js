@@ -173,6 +173,31 @@ function functionIntiateMenuMobile() {
             
             functionWholeFaqQuestionToggle()
 
+            function functionWholeFaqQuestionToggleToDo() {
+
+              const constQuestions = document.querySelectorAll('[data-todo="things-to-do"]')
+              
+              constQuestions.forEach((elementQuestions) => elementQuestions.addEventListener('click', () => {
+              
+                if (elementQuestions.classList.contains('active-li')) {
+              
+                  elementQuestions.classList.toggle('active-li')
+                } 
+                
+                else {
+              
+                  constQuestions.forEach((elementQuestions) => elementQuestions.classList.remove('active-li'))
+                  
+                  elementQuestions.classList.add('active-li')
+              
+                }
+              
+              }))
+              
+              } 
+              
+              functionWholeFaqQuestionToggleToDo()
+
 function scrollToTop() {
   window.scrollTo(0, 0)
 }

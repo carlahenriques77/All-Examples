@@ -188,3 +188,7 @@ main {
     left: 0px;
 }
 
+.active-li img {
+    display: block;
+}
+

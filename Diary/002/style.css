@@ -273,13 +273,70 @@ img {
     margin-top: 30px;
 }
 
-.things-to-do {
-    margin: 10px 20px;
+[data-todo="things-to-do"] {
+    margin: 0px 20px;
     list-style-type: disc;
 }
 
-.things-to-do li {
-    line-height: 24px;
+[data-todo="things-to-do"] img {
+    display: none;
+    width: 200px;
+    margin: 10px 0;
+}
+
+[data-todo="things-to-do"] .active-question {
+    display: block;
+} 
+
+[data-todo="things-to-do"] li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+[data-todo="things-to-do"] li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: hotpink;
+}
+
+[data-todo="things-to-do"] li::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url('https://www.origamid.com/projetos/animais-fantasticos/img/arrow-red.svg') no-repeat center center;
+    margin-left: 10px;
+    transform: rotate(90deg);
+    transition: transform .3s;
+}
+
+[data-todo="things-to-do"].active-li li::after {
+    transform: rotate(-90deg);
+}
+
+.last-li {
+    margin: 0px 20px;
+}
+
+.last-li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: hotpink;
+}
+
+.marriage {
+    rotate: 1deg;
+    width: 200px;
+    margin: 10px auto;
+    display: flex;
 }
 
 .breasts-container {
