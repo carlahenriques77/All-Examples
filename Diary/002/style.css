@@ -132,12 +132,10 @@ p {
 
 .label1:hover {
     background: rgb(185, 46, 83);
-    font-weight: 700;
 }
 
 .label2:hover {
     background: rgb(194, 77, 80);
-    font-weight: 700;
 }
 
 .label1:active {
