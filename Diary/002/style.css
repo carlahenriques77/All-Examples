@@ -273,6 +273,15 @@ img {
     margin-top: 30px;
 }
 
+.things-to-do {
+    margin: 10px 20px;
+    list-style-type: disc;
+}
+
+.things-to-do li {
+    line-height: 24px;
+}
+
 .breasts-container {
     position: relative;
     width: 200px;
