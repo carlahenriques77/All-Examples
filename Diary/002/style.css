@@ -347,10 +347,14 @@ img {
 }
 
 .marriage {
-    rotate: 1deg;
     width: 200px;
     margin: 10px auto;
+    justify-content: center;
     display: flex;
+}
+
+.marriage img {
+    box-shadow: none;
 }
 
 .dances-image {
