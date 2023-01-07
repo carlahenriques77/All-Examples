@@ -319,6 +319,19 @@ img {
     transform: rotate(-90deg);
 }
 
+.multiple-images {
+    display: flex;
+}
+
+.four-images {
+    display: none;
+    overflow-x: scroll;
+}
+
+.active-li .four-images {
+    display: flex;
+}
+
 .last-li {
     margin-top: 6px;
     margin: 0px 20px;
