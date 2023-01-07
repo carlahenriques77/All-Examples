@@ -384,6 +384,13 @@ img {
     display: flex;
 }
 
+.face {
+    width: 200px;
+    margin: 16px auto;
+    display: flex;
+    box-shadow: none;
+}
+
 .breasts-container {
     position: relative;
     width: 200px;
