@@ -353,6 +353,33 @@ img {
     display: flex;
 }
 
+.dances-image {
+    width: 250px;
+    margin: 16px auto;
+    display: flex;
+    overflow-x: scroll;
+    border: 4px solid black;
+}
+
+.dances-image::-webkit-scrollbar {
+    width: 1px;
+    height: 16px;
+}
+  
+.dances-image::-webkit-scrollbar-track {
+    background: white;
+}
+
+.dances-image::-webkit-scrollbar-thumb {
+    background: #F04226;
+}
+
+.naughty-dance {
+    width: 200px;
+    margin: 10px auto;
+    display: flex;
+}
+
 .breasts-container {
     position: relative;
     width: 200px;
