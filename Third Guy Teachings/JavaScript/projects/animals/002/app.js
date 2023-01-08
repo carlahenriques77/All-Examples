@@ -365,6 +365,126 @@ function functionIntiateSmoothScroll() {
 functionIntiateSmoothScroll()
 
 
+function functionIntiateAnimalSlide() {
+
+  class classSlide {
+
+    constructor(anySlide, anyWrapper) {
+
+      this.anySlide = document.querySelector(anySlide)
+
+      this.anyWrapper = document.querySelector(anyWrapper)
+
+      this.anyDist = {
+        constFinalPosition: 0, startX: 0, movement: 0
+      }
+
+      this.anyActiveSlide = 'active-slide'
+
+      this.anyChangeEvent = new Event('changeEvent')
+      
+    }
+
+    methodTransition(anyActive) {
+
+      this.anySlide.style.transition = anyActive ? 'transform .3s' : ''
+
+    }
+
+    methodMoveSlide(anyDistX) {
+
+      this.anyDist.anyMovePosition = anyDistX
+
+      this.anySlide.style.transform = `translate3d(${anyDistX}px, 0, 0)`
+
+    }
+
+    methodUpdatePosition(anyClientX) {
+
+      this.anyDist.movement = (this.anyDist.startX - anyClientX) * 1.6
+
+      return this.anyDist.constFinalPosition - this.anyDist.movement
+
+    }
+
+    methodOnStart(anyMethodStartEvent) {
+
+      let letMoveType
+
+      if (anyMethodStartEvent.type === 'mousedown') {
+
+        anyMethodStartEvent.preventDefault()
+
+        this.anyDist.startX = anyMethodStartEvent.anyClientX
+
+        letMoveType = 'mousemove'
+
+      }
+
+      else {
+
+        this.anyDist.startX = anyMethodStartEvent.anyChangedTouches[0].anyClientX
+
+        letMoveType = 'touchmove'
+        
+      }
+
+      this.anyWrapper.addEventListener(letMoveType, this.methodOnMove)
+
+    }
+
+    methodOnMove(anyOnMoveEvent) {
+
+      const constPointerPosition = (anyOnMoveEvent.type === 'mousemove') ? anyOnMoveEvent.anyClientX : anyOnMoveEvent.anyChangedTouches[0].anyClientX
+
+      const constFinalPosition = this.methodUpdatePosition(constPointerPosition)
+
+      this.methodMoveSlide(constFinalPosition)
+
+    }
+
+    methodOnEnd(anyOnEndEvent) {
+
+      const constMoveType = (anyOnEndEvent.type === 'mouseup') ? 'mousemove' : 'touchmove'
+
+      this.anyWrapper.removeEventListener(constMoveType, this.methodOnMove)
+
+      this.anyDist.constFinalPosition = this.anyDist.anyMovePosition
+
+      this.methodTransition(true)
+
+      this.methodChangeSlideOnEnd()
+    
+    }
+
+    methodChangeSlideOnEnd() {
+
+    if (this.anyDist.movement > 120 && this.index.next !== undefined) {
+
+      this.methodActiveNextSlide()
+
+    }
+
+    else if (this.anyDist.movement < -120 && this.index.prev !== undefined) {
+
+      this.methodActivePrevSlide()
+
+    }
+
+    else {
+
+      this.methodChangeSlide(this.index.active)
+
+    }
+
+    }
+
+  }
+
+}
+
+functionIntiateAnimalSlide()
+
 /*
   
 */

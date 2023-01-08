@@ -166,11 +166,38 @@ p {
     transform: rotate(-1deg);
     margin: 16px auto;
     box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
-    ;
+    position: relative;
 }
 
-img {
-    box-shadow: 0 0 6px rgb(0 0 0 / 25%);;
+.diary-stickers {
+    position: absolute;
+    width: 100px;
+}
+
+.sticker1 { 
+    right: -155px;
+    bottom: 87px;
+    rotate: -4deg;
+}
+
+.sticker2 { 
+    left: -155px;
+    top: 4px;
+    width: 80px;
+    rotate: 4deg;
+}
+
+.sticker3 { 
+    right: -155px;
+    bottom: 0px;
+    rotate: -1deg;
+}
+
+
+@media (max-width: 800px) {
+    .diary-stickers {
+        display: none;
+    }
 }
 
 .image2 {
@@ -180,12 +207,75 @@ img {
     align-items: center;
     gap: 13px;
     flex-direction: column;
+    position: relative;
+}
+
+.language-stickers {
+    width: 50px;
+    position: absolute;
+    border: 4px solid black;
+    border-radius: 50%;
+}
+
+.sticker4 {
+    top: 108px;
+    left: -128px;
+}
+
+.sticker5 {
+    top: 198px;
+    left: -128px;
+}
+
+.sticker6 { 
+    width: 100px;
+    position: absolute;
+    top: 139px;
+    right: -169px;
+}
+
+@media (max-width: 700px) {
+    .sticker4 {
+        left: -65px;
+    }
+    
+    .sticker5 {
+        left: -65px;
+    }
+
+    .sticker6 {
+        display: none;
+    }
 }
 
 .errors-image {
     width: 200px;
     margin: 16px auto;
     rotate: 2deg;
+    position: relative;
+}
+
+.sticker7 {
+    width: 100px;
+    position: absolute;
+    left: -176px;
+    bottom: 4px;
+}
+
+.sticker8 {
+    position: absolute;
+    width: 50px;
+    right: -123px;
+}
+
+@media (max-width: 650px) {
+    .sticker7 {
+        display: none;
+    }
+    
+    .sticker8 {
+        right: -86px;
+    }
 }
 
 .his-message {

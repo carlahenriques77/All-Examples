@@ -168,6 +168,50 @@ dd {
     animation: ddAnimation .5s forwards;
 }
 
+/* Slide */
+
+[data-slide="controls"] {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+[data-slide="controls"] li {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #FB5;
+    border: 50%;
+    overflow: hidden;
+    text-indent: -999px;
+    margin: 5px;
+}
+
+.slide-wrapper {
+    overflow: hidden;
+}
+
+.slide-wrapper ul {
+    display: flex;
+}
+
+.slide-wrapper li {
+    flex-shrink: 0;
+    width: 80vw;
+    max-width: 800px;
+    margin: 0 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+}
+
+.slide-wrapper li.active-slide {
+    opacity: 1;
+}
+
+
+
+
 /* Contact */
 .map-hover {
     position: absolute;
