@@ -332,6 +332,19 @@ img {
     display: flex;
 }
 
+.four-images::-webkit-scrollbar {
+    width: 1px;
+    height: 16px;
+}
+  
+.four-images::-webkit-scrollbar-track {
+    background: white;
+}
+
+.four-images::-webkit-scrollbar-thumb {
+    background: pink;
+}
+
 .last-li {
     margin-top: 6px;
     margin: 0px 20px;
@@ -473,58 +486,40 @@ img {
     width: 250px;
 }
 
+
 .what-i-meant {
-    gap: 35px;
+    width: 250px;
+    margin: 16px auto;
     display: flex;
-    justify-content: center;
+    overflow-x: scroll;
+    border: 4px solid black;
+}
+
+.what-i-meant::-webkit-scrollbar {
+    width: 1px;
+    height: 16px;
+}
+  
+.what-i-meant::-webkit-scrollbar-track {
+    background: white;
+}
+
+.what-i-meant::-webkit-scrollbar-thumb {
+    background: #F04226;
 }
 
 @media (max-width: 700px) {
-    .what-i-meant {
-        gap: 0;
-        overflow-x: scroll;
-        border: 4px solid black;
-        z-index: 1;
-    }
-
-    .what-i-meant::-webkit-scrollbar {
-        width: 1px;
-        height: 16px;
-    }
-      
-    .what-i-meant::-webkit-scrollbar-track {
-        background: white;
-    }
-    
-    .what-i-meant::-webkit-scrollbar-thumb {
-        background: #FB5;
-    }
-
-    .lap1,
-    .lap2 {
-        rotate: 0deg !important;
-    }
-
     .lap-heart1 {
-        left: 245px !important;
+        left: 261px !important;
     }
 
     .lap-heart2 {
-        right: 245px !important;
+        right: 261px !important;
     }
 }
 
 .what-i-meant img {
     width: 165px;
-}
-
-.lap1 {
-    rotate: -3deg;
-    margin-top: 6px;
-}
-
-.lap2 {
-    rotate: 2deg;
 }
 
 .lap-heart1,
