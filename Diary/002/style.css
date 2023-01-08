@@ -35,6 +35,14 @@ header {
     z-index: 5000;
 }
 
+.black-li {
+    background: black;
+}
+
+.black-li a{
+    color: white !important;
+}
+
 header button {
     border: none;
     background: #F04226;
@@ -726,3 +734,206 @@ strong {
 i {
     text-decoration: underline;
 }
+
+.hungry {
+    width: 200px;
+    display: flex;
+    margin: 16px auto;
+    position: relative;
+}
+
+.empty-plate {
+    position: absolute;
+    width: 140px;
+}
+
+.plate1 {
+    top: 167px;
+    left: -195px;
+    rotate: 7deg;
+    width: 163px;
+}
+
+.plate2 {
+    bottom: 114px;
+    right: -197px;
+    rotate: -5deg;
+}
+
+@media (max-width: 700px) {
+    .empty-plate {
+        display: none;
+    }
+}
+
+.purchases-container {
+    margin: 16px auto;
+    position: relative;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+}
+
+.purchase-stickers {
+    position: absolute;
+}
+
+.purchases1 {
+    top: -16px;
+    left: -168px;
+    width: 110px;
+    rotate: -2deg;
+}
+
+.purchases2 {
+    top: 11px;
+    left: 216px;
+    width: 133px;
+    rotate: 3deg;
+    z-index: 1;
+}
+
+.purchases3 {
+    top: 128px;
+    left: 260px;
+    width: 78px;
+    rotate: -24deg;
+}
+
+.purchases4 {
+    top: 100px;
+    left: -184px;
+    width: 107px;
+    rotate: 10deg;
+}
+
+.purchases5 {
+    top: 80px;
+    left: 355px;
+    width: 113px;
+    rotate: 17deg;
+}
+
+@media (max-width: 800px) {
+    .purchase-stickers {
+        display: none;
+    }
+}
+
+.purchases {
+    display: flex;
+    overflow-x: scroll;
+    border: 4px solid black;
+}
+
+.purchases::-webkit-scrollbar {
+    width: 1px;
+    height: 16px;
+}
+  
+.purchases::-webkit-scrollbar-track {
+    background: white;
+}
+
+.purchases::-webkit-scrollbar-thumb {
+    background: greenyellow;
+}
+
+.foods-container {
+    display: flex;
+    width: 200px;
+    margin: 16px auto;
+    justify-content: center;
+    position: relative;
+}
+
+.foods-stickers {
+    width: 50px;
+    position: absolute;
+}
+
+.foods1 {
+    top: 34px;
+    left: -229px;
+    width: 168px;
+}
+
+.foods2 {
+    left: 284px;
+    width: 111px;
+}
+
+.foods3 {
+    left: 250px;
+    width: 175px;
+    top: 156px;
+}
+
+@media (max-width: 760px) {
+    .foods-stickers {
+        display: none;
+    }
+}
+
+.foods {
+    overflow-x: scroll;
+    border: 4px solid black;
+    display: flex;
+}
+
+.foods::-webkit-scrollbar {
+    width: 1px;
+    height: 16px;
+}
+  
+.foods::-webkit-scrollbar-track {
+    background: white;
+}
+
+.foods::-webkit-scrollbar-thumb {
+    background: brown;
+}
+
+.orc-container {
+    position: relative;
+}
+
+.ogre-paragraph {
+    margin: 20px 40px 0 40px;
+}
+
+.orc-head {
+    position: absolute;
+    width: 50px;
+}
+
+.orc1 {
+    top: 14px;
+    right: -18px;
+}
+
+.orc2 {
+    top: 14px;
+    left: -18px;
+}
+
+.violence-container {
+    display: flex;
+    margin: 16px auto;
+    width: 200px;
+    justify-content: center;
+}
+
+.exercise {
+    display: flex;
+    margin: 16px auto;
+    width: 200px;
+}
+
+.coffee {
+    display: flex;
+    margin: 16px auto;
+    width: 300px;
+}
+
+
