@@ -702,3 +702,27 @@ p {
     right: 341px;
     rotate: 13deg;
 }
+
+.italic-text {
+    font-style: italic;
+}
+
+.coffin {
+    width: 200px;
+    display: flex;
+    margin: 16px auto;
+}
+
+.coffin2 {
+    width: 250px;
+    display: flex;
+    margin: 16px auto;
+}
+
+strong {
+    font-weight: 700;
+}
+
+i {
+    text-decoration: underline;
+}
