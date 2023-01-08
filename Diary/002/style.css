@@ -454,15 +454,64 @@ p {
     margin: 10px auto;
     justify-content: center;
     display: flex;
+    position: relative;
 }
 
 .marriage img {
     box-shadow: none;
 }
 
-.dances-image {
+.marriage-stickers {
+    position: absolute;
+}
+
+.sticker15 {
+    right: -204px;
+    bottom: 153px;
+    width: 128px;
+}
+
+.sticker16 {
+    left: -221px;
+    top: 174px;
+}
+
+@media (max-width: 700px) {
+    .marriage-stickers {
+        display: none;
+    }    
+}
+
+.dances-container {
     width: 250px;
     margin: 16px auto;
+    position: relative;
+}
+
+.dance-stickers {
+    position: absolute;
+}
+
+.sticker12 {
+    bottom: 273px;
+    left: -235px;
+    rotate: 9deg;
+}
+
+.sticker13 {
+    top: 242px;
+    right: -200px;
+    rotate: -6deg;
+}
+
+@media (max-width: 800px) {
+    .dance-stickers {
+        display: none;
+    }
+}
+
+.dances-image {
+    width: 250px;
     display: flex;
     overflow-x: scroll;
     border: 4px solid black;
@@ -485,6 +534,7 @@ p {
     width: 200px;
     margin: 10px auto;
     display: flex;
+    position: relative;
 }
 
 .face {
@@ -534,6 +584,28 @@ p {
     box-shadow: none;
     rotate: -20deg;
     transform: scaleY(-1);
+}
+
+.breasts-stickers {
+    position: absolute;
+    top: -10px;
+    right: -145px;
+    width: 96px;
+    right: -183px;
+}
+
+.sticker10 {
+    top: -20px;
+}
+
+.sticker11 {
+    top: 86px;
+}
+
+@media (max-width: 630px) {
+    .breasts-stickers {
+        right: -110px
+    }
 }
 
 .breasts-p {
