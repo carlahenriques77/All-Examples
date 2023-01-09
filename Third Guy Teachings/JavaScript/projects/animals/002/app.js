@@ -281,7 +281,7 @@ function functionIntiateOpenHours() {
 
   const constCurrentHours = constCurrentDate.getHours();
 
-  const constOpenWeekDays = constWeekDays.indexOf(constCurrentDay) !== -1;
+  const constOpenWeekDays = constWeekDays.anySlideIndexOf(constCurrentDay) !== -1;
 
   const constOpenHours =
     constCurrentHours >= constWeekDays[0] &&
@@ -459,13 +459,13 @@ function functionIntiateAnimalSlide() {
 
     methodChangeSlideOnEnd() {
 
-    if (this.anyDist.movement > 120 && this.index.next !== undefined) {
+    if (this.anyDist.movement > 120 && this.anySlideIndex.next !== undefined) {
 
       this.methodActiveNextSlide()
 
     }
 
-    else if (this.anyDist.movement < -120 && this.index.prev !== undefined) {
+    else if (this.anyDist.movement < -120 && this.anySlideIndex.prev !== undefined) {
 
       this.methodActivePrevSlide()
 
@@ -473,11 +473,82 @@ function functionIntiateAnimalSlide() {
 
     else {
 
-      this.methodChangeSlide(this.index.active)
+      this.methodChangeSlide(this.anySlideIndex.active)
 
     }
 
+  }
+
+  methodAddSlideEvents() {
+
+    this.anyWrapper.addEventListener('mousedown', this.methodOnStart)
+
+    this.anyWrapper.addEventListener('touchstart', this.methodOnStart)
+
+    this.anyWrapper.addEventListener('mouseup', this.methodOnEnd)
+
+    this.anyWrapper.addEventListener('touchend', this.methodOnEnd)
+
+  }
+
+  // Slides Config
+
+  methodSlidePosition(anySlidePosition) {
+
+    const constMargin = (this.anyWrapper.offsetWidth - anySlidePosition.offsetWidth) / 2
+
+    return -(anySlidePosition.offsetLeft - constMargin)
+
+  }
+
+  methodSlidesConfig() {
+    
+    this.propertySlideArray = [...this.anySlide.children].map((anyConfigElement) => {
+
+      const constPosition = this.methodSlidePosition(anyConfigElement)
+
+      return { constPosition, anyConfigElement }
+
+    })
+
+  }
+
+  methodSlideIndexNav(anySlideIndex) {
+    
+    const constLast = this.propertySlideArray.length - 1
+
+    this.anySlideIndex = {
+
+      prev: anySlideIndex ? anySlideIndex - 1 : undefined,
+
+      active: anySlideIndex,
+
+      next: anySlideIndex === constLast ? undefined : anySlideIndex + 1,
+
     }
+
+  }
+
+  methodChangeSlide(anyChangeSlideIndex) {
+
+    const constActiveSlide = this.propertySlideArray[anyChangeSlideIndex]
+
+    this.methodMoveSlide(constActiveSlide.constPosition)
+
+    this.methodSlideIndexNav(anyChangeSlideIndex)
+
+    this.anyDist.constFinalPosition = constActiveSlide.constPosition
+
+    this.methodChangeActiveClass()
+
+    this.anyWrapper.methodDispatchEvent(this.anyChangeEvent)
+
+  }
+
+  methodChangeActiveClass() {
+
+    this.propertySlideArray.forEach(parameterSlideArray => parameterSlideArray.anyChangeActiveElement.classList.remove(this.))
+  }
 
   }
 

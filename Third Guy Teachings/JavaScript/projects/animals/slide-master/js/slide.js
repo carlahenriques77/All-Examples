@@ -118,11 +118,15 @@ export default class Slide {
 
       this.activeNextSlide();
 
-    } else if (this.dist.movement < -120 && this.index.prev !== undefined) {
+    } 
+    
+    else if (this.dist.movement < -120 && this.index.prev !== undefined) {
 
       this.activePrevSlide();
 
-    } else {
+    } 
+    
+    else {
 
       this.changeSlide(this.index.active);
 
@@ -141,37 +145,61 @@ export default class Slide {
 
   slidePosition(slide) {
     const margin = (this.wrapper.offsetWidth - slide.offsetWidth) / 2;
+
     return -(slide.offsetLeft - margin);
+
   }
 
   slidesConfig() {
+
     this.slideArray = [...this.slide.children].map((element) => {
+
       const position = this.slidePosition(element);
+
       return { position, element };
+
     });
+
   }
 
   slidesIndexNav(index) {
+
     const last = this.slideArray.length - 1;
+
     this.index = {
+
       prev: index ? index - 1 : undefined,
+
       active: index,
+
       next: index === last ? undefined : index + 1,
+
     }
+
   }
 
   changeSlide(index) {
+
     const activeSlide = this.slideArray[index];
+
     this.moveSlide(activeSlide.position);
+
     this.slidesIndexNav(index);
+
     this.dist.finalPosition = activeSlide.position;
+
     this.changeActiveClass();
+
     this.wrapper.dispatchEvent(this.changeEvent);
+
   }
 
   changeActiveClass() {
+
     this.slideArray.forEach(item => item.element.classList.remove(this.activeClass));
+
     this.slideArray[this.index.active].element.classList.add(this.activeClass);
+    
   }
 
   activePrevSlide() {
