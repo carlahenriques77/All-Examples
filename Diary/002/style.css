@@ -35,6 +35,10 @@ header {
     z-index: 5000;
 }
 
+.hotpink-li {
+    background: #FC9CA7;
+}
+
 .black-li {
     background: black;
 }
@@ -660,6 +664,12 @@ p {
     display: flex;
     justify-content: center;
     margin: 16px auto;
+}
+
+.sticker18 {
+    right: -172px;
+    bottom: 129px;
+    width: 115px;
 }
 
 .muscle-two {
