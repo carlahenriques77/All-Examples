@@ -570,7 +570,6 @@ p {
     background: #a24bfd;
 }
 
-
 .face {
     width: 200px;
     margin: 16px auto;
@@ -654,6 +653,23 @@ p {
         width: 13ch;
         left: -122px;
     }
+}
+
+.muscle {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin: 16px auto;
+}
+
+.muscle-two {
+    display: flex;
+    margin: 16px auto;
+    justify-content: center;
+}
+
+.muscle-two img {
+    width: 150px;
 }
 
 .heart1 {

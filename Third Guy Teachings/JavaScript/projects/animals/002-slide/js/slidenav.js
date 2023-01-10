@@ -1,8 +1,8 @@
-import Slide from './slide';
+import Slide from './slide.js';
 
 export default class SlideNav extends Slide {
-  constructor(slide, wrapper) {
-    super(slide, wrapper);
+  constructor(anySlide, anyWrapper) {
+    super(anySlide, anyWrapper);
     this.bindControlEvents();
   }
 
@@ -23,7 +23,7 @@ export default class SlideNav extends Slide {
     this.slideArray.forEach((item, index) => {
       control.innerHTML += `<li><a href="#slide${index + 1}">${index + 1}</a></li>`;
     });
-    this.wrapper.appendChild(control);
+    this.anyWrapper.appendChild(control);
     return control;
   }
 
@@ -32,7 +32,7 @@ export default class SlideNav extends Slide {
       event.preventDefault();
       this.changeSlide(index);
     });
-    this.wrapper.addEventListener('changeEvent', this.activeControlItem);
+    this.anyWrapper.addEventListener('changeEvent', this.activeControlItem);
   }
 
   activeControlItem() {
