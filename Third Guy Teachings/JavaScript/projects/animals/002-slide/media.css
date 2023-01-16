@@ -1,0 +1,100 @@
+@media (min-width: 700px) {
+  /* Main Grid */
+
+  .grid-section {
+    display: grid;
+    grid-template-columns: 90px 300px 1fr;
+    grid-template-areas:
+      "a a a"
+      ". b b";
+  }
+
+  .grid-section h1 {
+    grid-area: a;
+  }
+
+  .common-grid {
+    grid-area: b;
+  }
+
+  .the-grid {
+    display: grid;
+    grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+  }
+
+  header {
+    grid-column: 3 / 5;
+    margin-top: 2rem;
+  }
+
+  main {
+    grid-column: 2 / 4;
+  }
+
+  /* The other Changes */
+
+  [data-menu="about-more"] {
+    display: none;
+  }
+
+  [data-menu="about-more"]::before {
+    top: -10px;
+    left: 0px;
+  }
+
+  [data-menu="button"] {
+    display: none;
+  }
+
+  [data-menu="header-ul"] {
+    display: block;
+    position: initial;
+    width: auto;
+    padding: 10px;
+    display: flex;
+  }
+
+  [data-menu="dropdown-about-li"] {
+    position: relative;
+  }
+
+  [data-menu="header-ul"].dropdown-menu-active {
+    display: flex;
+  }
+
+  [data-menu="about-more"] {
+    position: absolute !important;
+    border: 2px solid #333;
+  }
+
+  [data-menu="dropdown-about-li"]:hover [data-menu="about-more"] {
+    display: block;
+    animation: show-up-dropdown-about 0.3s forwards;
+  }
+
+  .section-title {
+    font-size: 6rem;
+  }
+
+  section.animals-desc {
+    grid-template-columns: 90px 300px 1fr;
+  }
+
+  section.animals-desc ul {
+    grid-column: 2;
+  }
+
+  [data-numbers="section-numbers"] h3 {
+    font-size: 2rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  footer.copyright {
+    grid-column: 3 / 5;
+  }
+}

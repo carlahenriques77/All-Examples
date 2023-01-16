@@ -14,242 +14,383 @@
     />
     <title>Animals</title>
 
-    <link rel="stylesheet" href="firstHalf.css" />
-    <link rel="stylesheet" href="secondHalf.css" />
-    <link rel="stylesheet" href="javaScript.css" />
+    <link rel="stylesheet" href="first-part.css" />
+    <link rel="stylesheet" href="second-part.css" />
+    <link rel="stylesheet" href="effects.css" />
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <div class="the-grid">
-      <header>
+      <header id="sticky-header-id">
         <nav data-scroll="smooth">
           <button data-menu="button">Menu</button>
           <ul data-menu="header-ul">
-            <li><a href="#animals">Animais</a></li>
+            <li><a href="#animals">Animals</a></li>
             <li data-menu="dropdown-about-li">
-              <a href="">Sobre</a>
+              <a href="">About Us</a>
               <ul data-menu="about-more">
-                <li><a href="">Equipe</a></li>
-                <li><a href="">Sócios</a></li>
-                <li><a href="">Investidores</a></li>
+                <li><a href="">Company</a></li>
+                <li><a href="">Team</a></li>
+                <li><a href="">Partners</a></li>
+                <li><a href="">Supporters</a></li>
               </ul>
             </li>
             <li><a href="#faq">Faq</a></li>
-            <li><a href="">Contato</a></li>
-            <li><a href="#login">Login</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#login" class="login-arrow">Login<span></span></a>
+            </li>
           </ul>
         </nav>
       </header>
       <main>
         <section
-          class="animals-section"
+          class="animals-section sticky-header-click-scroll"
           id="animals"
           data-scroll="animation-scroll"
         >
-          <h1>Animais Fantásticos</h1>
-          <section class="animals-desc">
+          <h1 class="section-title">Fantastic Beasts</h1>
+          <section class="animals-desc common-grid">
             <ul data-tab="animal-choices">
-              <li><img src="images/imagem4.jpg" alt="" /></li>
-              <li><img src="images/imagem2.jpg" alt="" /></li>
-              <li><img src="images/imagem3.jpg" alt="" /></li>
-              <li><img src="images/imagem1.jpg" alt="" /></li>
-              <li><img src="images/imagem5.jpg" alt="" /></li>
-              <li><img src="images/imagem6.jpg" alt="" /></li>
+              <li>
+                <img
+                  class="active-image"
+                  data-choices="image-toggle"
+                  src="images/imagem4.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  data-choices="image-toggle"
+                  src="images/imagem2.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  data-choices="image-toggle"
+                  src="images/imagem3.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  data-choices="image-toggle"
+                  src="images/imagem1.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  data-choices="image-toggle"
+                  src="images/imagem6.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  data-choices="image-toggle"
+                  src="images/imagem5.jpg"
+                  alt=""
+                />
+              </li>
             </ul>
             <div data-tab="description">
               <section class="description">
                 <h2>Wolf</h2>
                 <p>
-                  As raposas são animais mamíferos e onívoros pertencentes à
-                  família Canidae. São vulpídeos de porte médio, caracterizados
-                  por um focinho comprido e uma cauda longa e peluda.
+                  The wolf (Canis lupus: wolves), also known as the gray wolf or
+                  grey wolf, is a large canine native to Eurasia and North
+                  America.
                 </p>
                 <p>
-                  Também apresentam como particularidade suas pupilas ovais,
-                  semelhantes às pupilas verticais dos felídeos.
+                  More than thirty subspecies of Canis lupus have been
+                  recognized, and gray wolves, as popularly understood, comprise
+                  wild subspecies. The wolf is the largest extant member of the
+                  family Canidae.
                 </p>
                 <p>
-                  As raposas são animais mamíferos e onívoros pertencentes à
-                  família Canidae. São vulpídeos de porte médio, caracterizados
-                  por um focinho comprido e uma cauda longa e peluda.
+                  It is also distinguished from other Canis species by its less
+                  pointed ears and muzzle, as well as a shorter torso and a
+                  longer tail. The wolf is nonetheless related closely enough to
+                  smaller Canis species, such as the coyote and the golden
+                  jackal, to produce fertile hybrids with them. The banded fur
+                  of a wolf is usually mottled white, brown, gray, and black,
+                  although subspecies in the arctic region may be nearly all
+                  white.
                 </p>
               </section>
               <section class="description">
                 <h2>Squirrel</h2>
                 <p>
-                  As raposas são animais mamíferos e onívoros pertencentes à
-                  família Canidae. São vulpídeos de porte médio, caracterizados
-                  por um focinho comprido e uma cauda longa e peluda. Também
-                  apresentam como particularidade suas pupilas ovais,
-                  semelhantes às pupilas verticais dos felídeos. As raposas são
-                  animais mamíferos e onívoros pertencentes à família Canidae.
-                  São vulpídeos de porte médio, caracterizados por um focinho
-                  comprido e uma cauda longa e peluda.
+                  Squirrels are members of the family Sciuridae, a family that
+                  includes small or medium-size rodents.
+                </p>
+                <p>
+                  The squirrel family includes tree squirrels, ground squirrels
+                  (including chipmunks and prairie dogs, among others), and
+                  flying squirrels. Squirrels are indigenous to the Americas,
+                  Eurasia, and Africa, and were introduced by humans to
+                  Australia.
+                </p>
+                <p>
+                  The earliest known fossilized squirrels date from the Eocene
+                  epoch, and among other living rodent families, the squirrels
+                  are most closely related to the mountain beaver and to the
+                  dormice.
+                </p>
+              </section>
+              <section class="description show-down">
+                <h2>Bear</h2>
+                <p>Bears are carnivoran mammals of the family Ursidae.</p>
+                <p>
+                  They are classified as caniforms, or doglike carnivorans.
+                  Although only eight species of bears are extant, they are
+                  widespread, appearing in a wide variety of habitats throughout
+                  the Northern Hemisphere and partially in the Southern
+                  Hemisphere. Bears are found on the continents of North
+                  America, South America, Europe, and Asia. Common
+                  characteristics of modern bears include large bodies with
+                  stocky legs, long snouts, small rounded ears, shaggy hair,
+                  plantigrade paws with five nonretractile claws, and short
+                  tails.
+                </p>
+                <p>
+                  Bears have been hunted since prehistoric times for their meat
+                  and fur; they have been used for bear-baiting and other forms
+                  of entertainment, such as being made to dance. With their
+                  powerful physical presence, they play a prominent role in the
+                  arts, mythology, and other cultural aspects of various human
+                  societies. In modern times, bears have come under pressure
+                  through encroachment on their habitats and illegal trade in
+                  bear parts, including the Asian bile bear market. The poaching
+                  and international trade of these most threatened populations
+                  are prohibited, but still ongoing.
+                </p>
+              </section>
+              <section class="description show-down">
+                <h2>Fox</h2>
+                <p>
+                  Foxes are small to medium-sized, omnivorous mammals belonging
+                  to several genera of the family Canidae. They have a flattened
+                  skull, upright, triangular ears, a pointed, slightly upturned
+                  snout, and a long bushy tail (or brush).
+                </p>
+                <p>
+                  Twelve species belong to the monophyletic "true foxes" group
+                  of genus Vulpes. Approximately another 25 current or extinct
+                  species are always or sometimes called foxes; these foxes are
+                  either part of the paraphyletic group of the South American
+                  foxes, or of the outlying group, which consists of the
+                  bat-eared fox, gray fox, and island fox.
+                </p>
+                <p>
+                  Foxes live on every continent except Antarctica. The most
+                  common and widespread species of fox is the red fox (Vulpes
+                  vulpes) with about 47 recognized subspecies.[2] The global
+                  distribution of foxes, together with their widespread
+                  reputation for cunning, has contributed to their prominence in
+                  popular culture and folklore in many societies around the
+                  world. The hunting of foxes with packs of hounds, long an
+                  established pursuit in Europe, especially in the British
+                  Isles, was exported by European settlers to various parts of
+                  the New World.
                 </p>
               </section>
               <section class="description">
-                <h2>Wolf</h2>
+                <h2>Lion</h2>
                 <p>
-                  As raposas são animais mamíferos e onívoros pertencentes à
-                  família Canidae. São vulpídeos de porte médio, caracterizados
-                  por um focinho comprido e uma cauda longa e peluda. Também
-                  apresentam como particularidade suas pupilas ovais,
-                  semelhantes às pupilas verticais dos felídeos. As raposas são
-                  animais mamíferos e onívoros pertencentes à família Canidae.
-                  São vulpídeos de porte médio, caracterizados por um focinho
-                  comprido e uma cauda longa e peluda.
+                  The lion (Panthera leo) is a large cat of the genus Panthera
+                  native to Africa and India. It has a muscular, broad-chested
+                  body; short, rounded head; round ears; and a hairy tuft at the
+                  end of its tail.
+                </p>
+                <p>
+                  It is sexually dimorphic; adult male lions are larger than
+                  females and have a prominent mane. It is a social species,
+                  forming groups called prides. A lion's pride consists of a few
+                  adult males, related females, and cubs. Groups of female lions
+                  usually hunt together, preying mostly on large ungulates. The
+                  lion is an apex and keystone predator; although some lions
+                  scavenge when opportunities occur and have been known to hunt
+                  humans, lions typically do not actively seek out and prey on
+                  humans.
+                </p>
+                <p>
+                  The lion inhabits grasslands, savannas and shrublands. It is
+                  usually more diurnal than other wild cats, but when
+                  persecuted, it adapts to being active at night and at
+                  twilight. During the Neolithic period, the lion ranged
+                  throughout Africa and Eurasia from Southeast Europe to India,
+                  but it has been reduced to fragmented populations in
+                  sub-Saharan Africa and one population in western India.
                 </p>
               </section>
               <section class="description">
-                <h2>Wolf</h2>
+                <h2>Mandrill</h2>
                 <p>
-                  As raposas são animais mamíferos e onívoros pertencentes à
-                  família Canidae. São vulpídeos de porte médio, caracterizados
-                  por um focinho comprido e uma cauda longa e peluda. Também
-                  apresentam como particularidade suas pupilas ovais,
-                  semelhantes às pupilas verticais dos felídeos. As raposas são
-                  animais mamíferos e onívoros pertencentes à família Canidae.
-                  São vulpídeos de porte médio, caracterizados por um focinho
-                  comprido e uma cauda longa e peluda.
+                  The mandrill (Mandrillus sphinx) is a large Old World monkey
+                  native to west central Africa. It is one of the most colorful
+                  mammals in the world, with red and blue skin on its face and
+                  posterior.
                 </p>
-              </section>
-              <section class="description">
-                <h2>Wolf</h2>
                 <p>
-                  As raposas são animais mamíferos e onívoros pertencentes à
-                  família Canidae. São vulpídeos de porte médio, caracterizados
-                  por um focinho comprido e uma cauda longa e peluda. Também
-                  apresentam como particularidade suas pupilas ovais,
-                  semelhantes às pupilas verticais dos felídeos. As raposas são
-                  animais mamíferos e onívoros pertencentes à família Canidae.
-                  São vulpídeos de porte médio, caracterizados por um focinho
-                  comprido e uma cauda longa e peluda.
+                  The species is sexually dimorphic, as males have a larger
+                  body, longer canine teeth and brighter coloring. Its closest
+                  living relative is the drill with which it shares the genus
+                  Mandrillus. Both species were traditionally thought to be
+                  baboons, but further evidence has shown that they are more
+                  closely related to white-eyelid mangabeys.
                 </p>
-              </section>
-              <section class="description">
-                <h2>Wolf</h2>
                 <p>
-                  As raposas são animais mamíferos e onívoros pertencentes à
-                  família Canidae. São vulpídeos de porte médio, caracterizados
-                  por um focinho comprido e uma cauda longa e peluda. Também
-                  apresentam como particularidade suas pupilas ovais,
-                  semelhantes às pupilas verticais dos felídeos. As raposas são
-                  animais mamíferos e onívoros pertencentes à família Canidae.
-                  São vulpídeos de porte médio, caracterizados por um focinho
-                  comprido e uma cauda longa e peluda.
+                  Mandrills mainly live in tropical rainforests but will also
+                  travel across savannas. They are active during the day and
+                  spend most of their time on the ground. Their preferred foods
+                  are fruit and seeds, but mandrills will consume leaves, piths,
+                  mushrooms, and animals from insects to juvenile antelope.
+                  Mandrills live in large, stable groups known as "hordes" which
+                  can number in the hundreds. Females form the core of these
+                  groups, while adult males are solitary and only reunite with
+                  the larger groups during the breeding season. Dominant males
+                  have the most vibrant colors and fattest flanks and rumps, and
+                  have the most success siring young.
                 </p>
               </section>
             </div>
           </section>
         </section>
-        <section class="faq-section" id="faq" data-scroll="animation-scroll">
-          <h1>FAQ</h1>
-          <dl class="questions-and-answers">
-            <div data-faq="question-toggle">
-              <dt>Qual a idade dos animais?</dt>
-              <dd>
-                As raposas são animais mamíferos e onívoros pertencentes à
-                família Canidae. São vulpídeos de porte médio, caracterizados
-                por um focinho comprido e uma cauda longa e peluda.
-              </dd>
-            </div>
-            <div data-faq="question-toggle">
-              <dt>Eles são fantásticos?</dt>
-              <dd>
-                Também apresentam como particularidade suas pupilas ovais,
-                semelhantes às pupilas verticais dos felídeos.
-              </dd>
-            </div>
-            <div data-faq="question-toggle">
-              <dt>Qual a diferença?</dt>
-              <dd>
-                As raposas são animais mamíferos e onívoros pertencentes à
-                família Canidae. São vulpídeos de porte médio, caracterizados
-                por um focinho comprido e uma cauda longa e peluda.
-              </dd>
-            </div>
-            <div data-faq="question-toggle">
-              <dt>Como proteger?</dt>
-              <dd>
-                Também apresentam como particularidade suas pupilas ovais,
-                semelhantes às pupilas verticais dos felídeos.
-              </dd>
-            </div>
-          </dl>
+        <section
+          class="faq-section grid-section sticky-header-click-scroll"
+          id="faq"
+          data-scroll="animation-scroll"
+        >
+          <h1 class="section-title">FAQ</h1>
+          <div class="common-grid">
+            <dl class="questions-and-answers">
+              <div data-faq="question-toggle" class="active-question">
+                <dt>What is the Age of the Animals?</dt>
+                <dd>
+                  <p>
+                    Wolves can live up to 14 years in the wild, while those in
+                    captivity can live up to 16 years.
+                  </p>
+
+                  <p>
+                    Bears live an average of 10-20 years, depending on species.
+                    Some species live closer to 30 years of age.
+                  </p>
+                </dd>
+              </div>
+              <div data-faq="question-toggle">
+                <dt>
+                  Under their white fur, what color is a polar bear’s skin?
+                </dt>
+                <dd>Black.</dd>
+              </div>
+              <div data-faq="question-toggle">
+                <dt>Are most reptiles cold-blooded or warm-blooded?</dt>
+                <dd>Cold-blooded.</dd>
+              </div>
+              <div data-faq="question-toggle">
+                <dt>How to Help?</dt>
+                <dd>
+                  <ul>
+                    <li>Plant Native Species</li>
+                    <li>Help the Zoo or Aquarium</li>
+                    <li>Make your yard a wildlife haven</li>
+                    <li>Aboid harmful Chemicals</li>
+                    <li>Pick up trash</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </div>
         </section>
 
-        <section class="animals-slide">
-          <ul class="custom-controls">
-            <li><img src="img/foto1-thumb.jpg" alt=""></li>
-            <li><img src="img/foto2-thumb.jpg" alt=""></li>
-            <li><img src="img/foto3-thumb.jpg" alt=""></li>
-            <li><img src="img/foto4-thumb.jpg" alt=""></li>
-            <li><img src="img/foto5-thumb.jpg" alt=""></li>
-            <li><img src="img/foto6-thumb.jpg" alt=""></li>
+        <!-- I don't know why, but... Wrapping this part in a Section breaks the Slide Images Resizing. -->
+        <ul
+          class="custom-controls animals-slide"
+          data-scroll="animation-scroll"
+        >
+          <li><img src="img/foto1-thumb.jpg" alt="" /></li>
+          <li><img src="img/foto2-thumb.jpg" alt="" /></li>
+          <li><img src="img/foto3-thumb.jpg" alt="" /></li>
+          <li><img src="img/foto4-thumb.jpg" alt="" /></li>
+          <li><img src="img/foto5-thumb.jpg" alt="" /></li>
+          <li><img src="img/foto6-thumb.jpg" alt="" /></li>
+        </ul>
+        <div class="slide-wrapper" data-scroll="animation-scroll">
+          <ul class="slide">
+            <li><img src="img/foto1.jpg" alt="" /></li>
+            <li><img src="img/foto2.jpg" alt="" /></li>
+            <li><img src="img/foto3.jpg" alt="" /></li>
+            <li><img src="img/foto4.jpg" alt="" /></li>
+            <li><img src="img/foto5.jpg" alt="" /></li>
+            <li><img src="img/foto6.jpg" alt="" /></li>
           </ul>
-          <div class="slide-lapper">
-            <ul class="slude">
-              <li><img src="img/foto1.jpg" alt=""></li>
-              <li><img src="img/foto2.jpg" alt=""></li>
-              <li><img src="img/foto3.jpg" alt=""></li>
-              <li><img src="img/foto4.jpg" alt=""></li>
-              <li><img src="img/foto5.jpg" alt=""></li>
-              <li><img src="img/foto6.jpg" alt=""></li>
+        </div>
+        <div class="arrow-nav" data-scroll="animation-scroll">
+          <button class="prev"></button>
+          <button class="next"></button>
+        </div>
+
+        <section
+          class="grid-section"
+          data-numbers="section-numbers"
+          data-scroll="animation-scroll"
+        >
+          <h1 class="section-title">Numbers</h1>
+
+          <div class="numbers-container common-grid">
+            <div class="animal-number-class">
+              <h3>Wolfs</h3>
+              <span data-number="animal-number-span">4874</span>
+            </div>
+            <div class="animal-number-class">
+              <h3>Foxs</h3>
+              <span data-number="animal-number-span">5374</span>
+            </div>
+            <div class="animal-number-class">
+              <h3>Squirrels</h3>
+              <span data-number="animal-number-span">12340</span>
+            </div>
+            <div class="animal-number-class">
+              <h3>Bears</h3>
+              <span data-number="animal-number-span">230</span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="contact-section grid-section sticky-header-click-scroll"
+          id="contact"
+          data-scroll="animation-scroll"
+        >
+          <h1 class="section-title">Contact</h1>
+          <div class="contact-grid common-grid">
+            <div data-map="address" aria-label="Some Adress.">
+              <img src="images/mapa.png" alt="" />
+            </div>
+            <ul>
+              <li>contact@origamid.com</li>
+              <li>+55 (21) 9999-9999</li>
+              <li>Some Street, nº 21</li>
+              <li>Some City - SC</li>
+              <li>
+                Donate <span data-bitcoin="bitcoin-price">0</span> Bitcoin to
+                Help Us
+              </li>
+              <li data-dataopenweekdays="1,2,3,4,5" data-dataopenhours="8,18">
+                From Monday to Friday, 8 AM to 18 PM
+              </li>
             </ul>
           </div>
-          <div class="arrow-nav">
-            <button class="prev"></button>
-            <button class="next"></button>
-          </div>
-        </section>
-
-        <section data-numbers="section-numbers" data-scroll="animation-scroll">
-          <h1>Números</h1>
-
-          <div class="animal-number-class">
-            <h3>Lobos</h3>
-            <span data-number="animal-number-span">4874</span>
-          </div>
-
-          <div class="animal-number-class">
-            <h3>Raposas</h3>
-            <span data-number="animal-number-span">5374</span>
-          </div>
-
-          <div class="animal-number-class">
-            <h3>Esquilos</h3>
-            <span data-number="animal-number-span">12340</span>
-          </div>
-
-          <div class="animal-number-class">
-            <h3>Ursos</h3>
-            <span data-number="animal-number-span">230</span>
-          </div>
-        </section>
-
-        <section class="contact-section" data-scroll="animation-scroll">
-          <h1>Contato</h1>
-          <div
-            data-map="address"
-            aria-label="Edereço próximo ao estacionamento."
-          >
-            <img src="images/mapa.png" alt="" />
-          </div>
-
-          <ul>
-            <li>contato@origamid.com</li>
-            <li>+55 (21) 9999-9999</li>
-            <li>Rua do Conde, nº 21</li>
-            <li>Rio de Janeiro - RJ</li>
-            <li>
-              Doe <span data-bitcoin="bitcoin-price">0</span> bitcoin para nos
-              ajudar
-            </li>
-            <li data-dataopenweekdays="1,2,3,4,5" data-dataopenhours="8,18">
-              Seg à Sex das 8 às 18
-            </li>
-          </ul>
         </section>
       </main>
+      <footer class="copyright">
+        <p>All rights reserved.</p>
+      </footer>
     </div>
 
     <div class="login-screen">
@@ -265,12 +406,12 @@
             </div>
 
             <div>
-              <label for="iPass">Senha</label>
+              <label for="iPass">Password</label>
               <input type="password" name="pass" id="iPass" />
               <label class="login-error-label"></label>
             </div>
 
-            <input type="submit" value="Entrar" />
+            <input type="submit" value="Sign In" />
           </form>
         </div>
       </div>

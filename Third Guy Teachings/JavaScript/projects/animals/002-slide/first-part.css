@@ -1,5 +1,7 @@
+/* Geral Css */
+
 * {
-  box-shadow: 0 0 0 2px red;
+  /* box-shadow: 0 0 0 2px red; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -25,7 +27,7 @@ header {
   padding: 1px 0;
 }
 
-/* First Animal Part */
+/* Main Content */
 
 main {
   display: grid;
@@ -33,14 +35,12 @@ main {
   padding: 0 10px;
 }
 
+/* Animals Choices and Description */
+
 h1 {
   font-family: "Playfair Display SC"; /* Dang, typing the Font makes an Difference... */
   font-weight: 400;
   font-size: 2.5rem;
-}
-
-section.animals-section {
-  margin: 40px 0 0px 0;
 }
 
 section.animals-section h1 {
@@ -111,7 +111,7 @@ section.animals-desc li {
 /* Faq */
 
 .faq-section {
-  margin: 64px 0 0px 0;
+  margin: 20px 0 0px 0;
 }
 
 .faq-section h1 {
@@ -151,7 +151,3 @@ dd {
   margin-top: 8px;
   margin-left: 30px;
 }
-
-/*
-
-*/

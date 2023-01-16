@@ -1,254 +1,376 @@
-import debounce from './debounce.js';
+import debounce from "./debounce.js";
 
-export default class classSlide {
+export default class Slide {
+  
+  constructor(constructorAnySlide, constructorAnyWrapper) {
 
-  constructor(anySlide, anyWrapper) {
+    this.constructorAnySlide = document.querySelector(constructorAnySlide);
 
-    this.anySlide = document.querySelector(anySlide);
+    this.constructorAnyWrapper = document.querySelector(constructorAnyWrapper);
 
-    this.anyWrapper = document.querySelector(anyWrapper);
+    this.thisPropertyAnyDist = {
 
-    this.dist = { 
-      finalPosition: 0, startX: 0, movement: 0 
-    }
+      propertyNumberFinalPosition: 0,
 
-    this.activeClass = 'active';
+      propertyNumberStartX: 0,
 
-    this.changeEvent = new Event('changeEvent');
+      propertyNumberMovement: 0,
+
+    };
+
+    this.thisPropertyAnyActiveClass = "active-slide";
+
+    this.thisPropertyAnyChangeEvent = new Event("changeEvent");
+  }
+
+  methodTransition(parameterAnyTransitionActive) {
+
+    this.constructorAnySlide.style.transition = parameterAnyTransitionActive
+
+      ? "transform .3s"
+
+      : "";
 
   }
 
-  transition(active) {
+  methodMoveSlide(anyMoveSlideDistX) {
 
-    this.anySlide.style.transition = active ? 'transform .3s' : '';
+    this.thisPropertyAnyDist.anyMovePosition = anyMoveSlideDistX;
 
-  }
-
-  moveSlide(distX) {
-
-    this.dist.movePosition = distX;
-
-    this.anySlide.style.transform = `translate3d(${distX}px, 0, 0)`;
-    
-  }
-
-  updatePosition(clientX) {
-
-    this.dist.movement = (this.dist.startX - clientX) * 1.6;
-
-    return this.dist.finalPosition - this.dist.movement;
+    this.constructorAnySlide.style.transform = `translate3d(${anyMoveSlideDistX}px, 0, 0)`;
 
   }
 
-  onStart(event) {
+  methodUpdatePosition(anyUpdatePositionClientX) {
 
-    let movetype;
+    this.thisPropertyAnyDist.propertyNumberMovement =
 
-    if (event.type === 'mousedown') {
+      (this.thisPropertyAnyDist.propertyNumberStartX -
 
-      event.preventDefault();
+        anyUpdatePositionClientX) *
 
-      this.dist.startX = event.clientX;
+      1.6;
 
-      movetype = 'mousemove';
+    return (
+
+      this.thisPropertyAnyDist.propertyNumberFinalPosition -
+
+      this.thisPropertyAnyDist.propertyNumberMovement
+
+    );
+
+  }
+
+  methodOnStart(anyOnStartEvent) {
+
+    let letAnyMovetype;
+
+    if (anyOnStartEvent.type === "mousedown") {
+
+      anyOnStartEvent.preventDefault();
+
+      this.thisPropertyAnyDist.propertyNumberStartX = anyOnStartEvent.clientX;
+
+      letAnyMovetype = "mousemove";
 
     } 
     
     else {
 
-      this.dist.startX = event.changedTouches[0].clientX;
+      this.thisPropertyAnyDist.propertyNumberStartX =
 
-      movetype = 'touchmove';
+        anyOnStartEvent.changedTouches[0].clientX;
+
+      letAnyMovetype = "touchmove";
 
     }
 
-    this.anyWrapper.addEventListener(movetype, this.onMove);
+    this.constructorAnyWrapper.addEventListener(
 
-    this.transition(false);
+      letAnyMovetype,
+
+      this.methodOnMove
+
+    );
+
+    this.methodTransition(false);
+  }
+
+  methodOnMove(anyOnMoveEvent) {
+
+    const constAnyPointerPosition =
+
+      anyOnMoveEvent.type === "mousemove"
+
+        ? anyOnMoveEvent.clientX
+
+        : anyOnMoveEvent.changedTouches[0].clientX;
+
+    const constNumberFinalPosition = this.methodUpdatePosition(
+
+      constAnyPointerPosition
+
+    );
+
+    this.methodMoveSlide(constNumberFinalPosition);
 
   }
 
-  onMove(event) {
+  methodOnEnd(anyOnEndEvent) {
 
-    const pointerPosition = (event.type === 'mousemove') ? event.clientX : event.changedTouches[0].clientX;
+    const constMovetype =
 
-    const finalPosition = this.updatePosition(pointerPosition);
+      anyOnEndEvent.type === "mouseup" ? "mousemove" : "touchmove";
 
-    this.moveSlide(finalPosition);
+    this.constructorAnyWrapper.removeEventListener(
+
+      constMovetype,
+
+      this.methodOnMove
+
+    );
+
+    this.thisPropertyAnyDist.propertyNumberFinalPosition =
+
+      this.thisPropertyAnyDist.anyMovePosition;
+
+    this.methodTransition(true);
+
+    this.methodChangeSlideOnEnd();
 
   }
 
-  onEnd(event) {
+  methodChangeSlideOnEnd() {
 
-    const movetype = (event.type === 'mouseup') ? 'mousemove' : 'touchmove';
+    if (
 
-    this.anyWrapper.removeEventListener(movetype, this.onMove);
+      this.thisPropertyAnyDist.propertyNumberMovement > 120 &&
 
-    this.dist.finalPosition = this.dist.movePosition;
+      this.thisPropertyIndex.propertyAnyNext !== undefined
 
-    this.transition(true);
+    ) 
+    
+    {
 
-    this.changeSlideOnEnd();
-
-  }
-
-  changeSlideOnEnd() {
-
-    if (this.dist.movement > 120 && this.index.next !== undefined) {
-
-      this.activeNextSlide();
+      this.methodActiveNextSlide();
 
     } 
     
-    else if (this.dist.movement < -120 && this.index.prev !== undefined) {
+    else if (
 
-      this.activePrevSlide();
+      this.thisPropertyAnyDist.propertyNumberMovement < -120 &&
+
+      this.thisPropertyIndex.propertyNumberPrev !== undefined
+
+    ) 
+    
+    {
+
+      this.methodActivePrevSlide();
 
     } 
     
     else {
 
-      this.changeSlide(this.index.active);
+      this.methodChangeSlide(
+
+        this.thisPropertyIndex.propertyAnyTransitionActive
+
+      );
 
     }
-    
+
   }
 
-  addSlideEvents() {
-    this.anyWrapper.addEventListener('mousedown', this.onStart);
-    this.anyWrapper.addEventListener('touchstart', this.onStart);
-    this.anyWrapper.addEventListener('mouseup', this.onEnd);
-    this.anyWrapper.addEventListener('touchend', this.onEnd);
+  methodAddSlideEvents() {
+
+    this.constructorAnyWrapper.addEventListener(
+
+      "mousedown", this.methodOnStart
+
+    );
+
+    this.constructorAnyWrapper.addEventListener(
+      "touchstart",
+      this.methodOnStart
+    );
+
+    this.constructorAnyWrapper.addEventListener("mouseup", this.methodOnEnd);
+
+    this.constructorAnyWrapper.addEventListener("touchend", this.methodOnEnd);
+
   }
 
   // Slides config
 
-  slidePosition(anySlide) {
-    const margin = (this.anyWrapper.offsetWidth - anySlide.offsetWidth) / 2;
+  methodSlidePosition(constructorAnySlide) {
 
-    return -(anySlide.offsetLeft - margin);
+    const constMargin =
 
-  }
+      (this.constructorAnyWrapper.offsetWidth -
 
-  slidesConfig() {
+        constructorAnySlide.offsetWidth) /
 
-    this.slideArray = [...this.anySlide.children].map((element) => {
+      2;
 
-      const position = this.slidePosition(element);
-
-      return { position, element };
-
-    });
+    return -(constructorAnySlide.offsetLeft - constMargin);
 
   }
 
-  slidesIndexNav(index) {
+  methodSlidesConfig() {
 
-    const last = this.slideArray.length - 1;
+    this.thisPropertySlideArray = [...this.constructorAnySlide.children].map(
 
-    this.index = {
+      (configAndChangeSlideAnyElement) => {
 
-      prev: index ? index - 1 : undefined,
+        const constPosition = this.methodSlidePosition(
 
-      active: index,
+          configAndChangeSlideAnyElement
 
-      next: index === last ? undefined : index + 1,
+        );
 
-    }
+        return { constPosition, configAndChangeSlideAnyElement };
 
-  }
+      }
 
-  changeSlide(index) {
-
-    const activeSlide = this.slideArray[index];
-
-    this.moveSlide(activeSlide.position);
-
-    this.slidesIndexNav(index);
-
-    this.dist.finalPosition = activeSlide.position;
-
-    this.changeActiveClass();
-
-    this.anyWrapper.dispatchEvent(this.changeEvent);
+    );
 
   }
 
-  changeActiveClass() {
+  methodSlidesIndexNav(parameterAnyIndex) {
 
-    this.slideArray.forEach(item => item.element.classList.remove(this.activeClass));
+    const constLast = this.thisPropertySlideArray.length - 1;
 
-    this.slideArray[this.index.active].element.classList.add(this.activeClass);
-    
-  }
+    this.thisPropertyIndex = {
 
-  activePrevSlide() {
+      propertyNumberPrev: parameterAnyIndex ? parameterAnyIndex - 1 : undefined,
 
-    if (this.index.prev !== undefined) this.changeSlide(this.index.prev);
+      propertyAnyTransitionActive: parameterAnyIndex,
 
-  }
+      propertyAnyNext:
 
-  activeNextSlide() {
+        parameterAnyIndex === constLast ? undefined : parameterAnyIndex + 1,
 
-    if (this.index.next !== undefined) this.changeSlide(this.index.next);
+    };
 
   }
 
-  onResize() {
+  methodChangeSlide(parameterAnyIndex) {
+
+    const constActiveSlide = this.thisPropertySlideArray[parameterAnyIndex];
+
+    this.methodMoveSlide(constActiveSlide.constPosition);
+
+    this.methodSlidesIndexNav(parameterAnyIndex);
+
+    this.thisPropertyAnyDist.propertyNumberFinalPosition =
+
+      constActiveSlide.constPosition;
+
+    this.methodChangeActiveClass();
+
+    this.constructorAnyWrapper.dispatchEvent(this.thisPropertyAnyChangeEvent);
+
+  }
+
+  methodChangeActiveClass() {
+
+    this.thisPropertySlideArray.forEach((parameterItem) =>
+
+      parameterItem.configAndChangeSlideAnyElement.classList.remove(
+
+        this.thisPropertyAnyActiveClass
+
+      )
+
+    );
+
+    this.thisPropertySlideArray[
+
+      this.thisPropertyIndex.propertyAnyTransitionActive
+
+    ].configAndChangeSlideAnyElement.classList.add(
+
+      this.thisPropertyAnyActiveClass
+
+    );
+
+  }
+
+  methodActivePrevSlide() {
+
+    if (this.thisPropertyIndex.propertyNumberPrev !== undefined)
+
+      this.methodChangeSlide(this.thisPropertyIndex.propertyNumberPrev);
+
+  }
+
+  methodActiveNextSlide() {
+
+    if (this.thisPropertyIndex.propertyAnyNext !== undefined)
+
+      this.methodChangeSlide(this.thisPropertyIndex.propertyAnyNext);
+
+  }
+
+  methodOnResize() {
 
     setTimeout(() => {
 
-      this.slidesConfig();
+      this.methodSlidesConfig();
 
-      this.changeSlide(this.index.active);
+      this.methodChangeSlide(
+
+        this.thisPropertyIndex.propertyAnyTransitionActive
+
+      );
 
     }, 1000);
 
   }
 
-  addResizeEvent() {
+  methodAddResizeEvent() {
 
-    window.addEventListener('resize', this.onResize);
-
-  }
-
-  bindEvents() {
-
-    this.onStart = this.onStart.bind(this);
-
-    this.onMove = this.onMove.bind(this);
-
-    this.onEnd = this.onEnd.bind(this);
-
-
-    this.activePrevSlide = this.activePrevSlide.bind(this);
-
-    this.activeNextSlide = this.activeNextSlide.bind(this);
-
-
-    this.onResize = debounce(this.onResize.bind(this), 200);
+    window.addEventListener("resize", this.methodOnResize);
 
   }
 
-  init() {
+  methodBindEvents() {
 
-    if (this.anySlide) {
+    this.methodOnStart = this.methodOnStart.bind(this);
 
-      this.bindEvents();
+    this.methodOnMove = this.methodOnMove.bind(this);
 
-      this.transition(true);
+    this.methodOnEnd = this.methodOnEnd.bind(this);
 
-      this.addSlideEvents();
+    this.methodActivePrevSlide = this.methodActivePrevSlide.bind(this);
 
-      this.slidesConfig();
+    this.methodActiveNextSlide = this.methodActiveNextSlide.bind(this);
 
-      this.addResizeEvent();
+    this.methodOnResize = debounce(this.methodOnResize.bind(this), 200);
 
-      this.changeSlide(0);
+  }
+
+  methodInit() {
+
+    if (this.constructorAnySlide) {
+
+      this.methodBindEvents();
+
+      this.methodTransition(true);
+
+      this.methodAddSlideEvents();
+
+      this.methodSlidesConfig();
+
+      this.methodAddResizeEvent();
+
+      this.methodChangeSlide(0);
+
     }
 
     return this;
-
+    
   }
-  
+
 }

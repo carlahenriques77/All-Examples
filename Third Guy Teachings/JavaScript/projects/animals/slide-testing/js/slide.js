@@ -18,13 +18,13 @@ export default class Slide {
 
   }
 
-  transition(active) {
+  methodTransition(active) {
 
     this.slide.style.transition = active ? 'transform .3s' : '';
 
   }
 
-  moveSlide(distX) {
+  methodMoveSlide(distX) {
 
     this.dist.movePosition = distX;
 
@@ -32,7 +32,7 @@ export default class Slide {
     
   }
 
-  updatePosition(clientX) {
+  methodUpdatePosition(clientX) {
 
     this.dist.movement = (this.dist.startX - clientX) * 1.6;
 
@@ -40,7 +40,7 @@ export default class Slide {
 
   }
 
-  onStart(event) {
+  methodOnStart(event) {
 
     let movetype;
 
@@ -62,79 +62,79 @@ export default class Slide {
 
     }
 
-    this.wrapper.addEventListener(movetype, this.onMove);
+    this.wrapper.addEventListener(movetype, this.methodOnMove);
 
-    this.transition(false);
+    this.methodtransition(false);
 
   }
 
-  onMove(event) {
+  methodOnMove(event) {
 
     const pointerPosition = (event.type === 'mousemove') ? event.clientX : event.changedTouches[0].clientX;
 
-    const finalPosition = this.updatePosition(pointerPosition);
+    const finalPosition = this.methodUpdatePosition(pointerPosition);
 
-    this.moveSlide(finalPosition);
+    this.methodMoveSlide(finalPosition);
 
   }
 
-  onEnd(event) {
+  methodOnEnd(event) {
 
     const movetype = (event.type === 'mouseup') ? 'mousemove' : 'touchmove';
 
-    this.wrapper.removeEventListener(movetype, this.onMove);
+    this.wrapper.removeEventListener(movetype, this.methodOnMove);
 
     this.dist.finalPosition = this.dist.movePosition;
 
-    this.transition(true);
+    this.methodtransition(true);
 
-    this.changeSlideOnEnd();
+    this.methodChangeSlideOnEnd();
 
   }
 
-  changeSlideOnEnd() {
+  methodChangeSlideOnEnd() {
 
     if (this.dist.movement > 120 && this.index.next !== undefined) {
 
-      this.activeNextSlide();
+      this.methodActiveNextSlide();
 
     } 
     
     else if (this.dist.movement < -120 && this.index.prev !== undefined) {
 
-      this.activePrevSlide();
+      this.methodActivePrevSlide();
 
     } 
     
     else {
 
-      this.changeSlide(this.index.active);
+      this.methodChangeSlide(this.index.active);
 
     }
     
   }
 
-  addSlideEvents() {
-    this.wrapper.addEventListener('mousedown', this.onStart);
-    this.wrapper.addEventListener('touchstart', this.onStart);
-    this.wrapper.addEventListener('mouseup', this.onEnd);
-    this.wrapper.addEventListener('touchend', this.onEnd);
+  methodAddSlideEvents() {
+    this.wrapper.addEventListener('mousedown', this.methodOnStart);
+    this.wrapper.addEventListener('touchstart', this.methodOnStart);
+    this.wrapper.addEventListener('mouseup', this.methodOnEnd);
+    this.wrapper.addEventListener('touchend', this.methodOnEnd);
   }
 
   // Slides config
 
-  slidePosition(slide) {
+  methodSlidePosition(slide) {
     const margin = (this.wrapper.offsetWidth - slide.offsetWidth) / 2;
 
     return -(slide.offsetLeft - margin);
 
   }
 
-  slidesConfig() {
+  methodSlidesConfig() {
 
     this.slideArray = [...this.slide.children].map((element) => {
 
-      const position = this.slidePosition(element);
+      const position = this.methodSlidePosition(element);
 
       return { position, element };
 
@@ -142,7 +142,7 @@ export default class Slide {
 
   }
 
-  slidesIndexNav(index) {
+  methodSlidesIndexNav(index) {
 
     const last = this.slideArray.length - 1;
 
@@ -158,23 +158,23 @@ export default class Slide {
 
   }
 
-  changeSlide(index) {
+  methodChangeSlide(index) {
 
     const activeSlide = this.slideArray[index];
 
-    this.moveSlide(activeSlide.position);
+    this.methodMoveSlide(activeSlide.position);
 
-    this.slidesIndexNav(index);
+    this.methodSlidesIndexNav(index);
 
     this.dist.finalPosition = activeSlide.position;
 
-    this.changeActiveClass();
+    this.methodChangeActiveClass();
 
     this.wrapper.dispatchEvent(this.changeEvent);
 
   }
 
-  changeActiveClass() {
+  methodChangeActiveClass() {
 
     this.slideArray.forEach(item => item.element.classList.remove(this.activeClass));
 
@@ -182,69 +182,69 @@ export default class Slide {
     
   }
 
-  activePrevSlide() {
+  methodActivePrevSlide() {
 
-    if (this.index.prev !== undefined) this.changeSlide(this.index.prev);
-
-  }
-
-  activeNextSlide() {
-
-    if (this.index.next !== undefined) this.changeSlide(this.index.next);
+    if (this.index.prev !== undefined) this.methodChangeSlide(this.index.prev);
 
   }
 
-  onResize() {
+  methodActiveNextSlide() {
+
+    if (this.index.next !== undefined) this.methodChangeSlide(this.index.next);
+
+  }
+
+  methodOnResize() {
 
     setTimeout(() => {
 
-      this.slidesConfig();
+      this.methodSlidesConfig();
 
-      this.changeSlide(this.index.active);
+      this.methodChangeSlide(this.index.active);
 
     }, 1000);
 
   }
 
-  addResizeEvent() {
+  methodAddResizeEvent() {
 
-    window.addEventListener('resize', this.onResize);
-
-  }
-
-  bindEvents() {
-
-    this.onStart = this.onStart.bind(this);
-
-    this.onMove = this.onMove.bind(this);
-
-    this.onEnd = this.onEnd.bind(this);
-
-
-    this.activePrevSlide = this.activePrevSlide.bind(this);
-
-    this.activeNextSlide = this.activeNextSlide.bind(this);
-
-
-    this.onResize = debounce(this.onResize.bind(this), 200);
+    window.addEventListener('resize', this.methodOnResize);
 
   }
 
-  init() {
+  methodBindEvents() {
+
+    this.methodOnStart = this.methodOnStart.bind(this);
+
+    this.methodOnMove = this.methodOnMove.bind(this);
+
+    this.methodOnEnd = this.methodOnEnd.bind(this);
+
+
+    this.methodActivePrevSlide = this.methodActivePrevSlide.bind(this);
+
+    this.methodActiveNextSlide = this.methodActiveNextSlide.bind(this);
+
+
+    this.methodOnResize = debounce(this.methodOnResize.bind(this), 200);
+
+  }
+
+  methodInit() {
 
     if (this.slide) {
 
-      this.bindEvents();
+      this.methodBindEvents();
 
-      this.transition(true);
+      this.methodtransition(true);
 
-      this.addSlideEvents();
+      this.methodAddSlideEvents();
 
-      this.slidesConfig();
+      this.methodSlidesConfig();
 
-      this.addResizeEvent();
+      this.methodAddResizeEvent();
 
-      this.changeSlide(0);
+      this.methodChangeSlide(0);
     }
 
     return this;
