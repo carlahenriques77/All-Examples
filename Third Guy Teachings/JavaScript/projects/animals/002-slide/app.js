@@ -333,6 +333,8 @@ function functionIntiateMenuMobile() {
 
     function functionOpenMenu(anyEventOpenMenu) {
 
+      anyEventOpenMenu.preventDefault()
+
       constMenuUlList.classList.add("dropdown-menu-active");
 
       constMenuButton.classList.add("dropdown-menu-active");
